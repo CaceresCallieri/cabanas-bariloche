@@ -4,12 +4,14 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./CarouselThumbsButton";
 
 type PropType = {
-  slides: number[];
+  images: string[];
   options?: EmblaOptionsType;
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { slides, options } = props;
+  const { images, options } = props;
+  const slides = Array.from(Array(10).keys());
+
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
   const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
@@ -42,9 +44,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
-          {slides.map((index) => (
+          {images.map((imagePath, index) => (
             <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">{index + 1}</div>
+              <div className="embla__slide__number">
+                <img src={imagePath} alt="Cabaña Ana" />
+              </div>
             </div>
           ))}
         </div>
@@ -55,10 +59,11 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           <div className="embla-thumbs__container">
             {slides.map((index) => (
               <Thumb
-                key={index}
-                onClick={() => onThumbClick(index)}
+                imagePath={images[index]}
                 selected={index === selectedIndex}
                 index={index}
+                onClick={() => onThumbClick(index)}
+                key={index}
               />
             ))}
           </div>

@@ -1,13 +1,14 @@
 import React from "react";
 
 type PropType = {
+  imagePath: string;
   selected: boolean;
   index: number;
   onClick: () => void;
 };
 
 export const Thumb: React.FC<PropType> = (props) => {
-  const { selected, index, onClick } = props;
+  const { imagePath, selected, index, onClick } = props;
 
   return (
     <div
@@ -20,7 +21,8 @@ export const Thumb: React.FC<PropType> = (props) => {
         type="button"
         className="embla-thumbs__slide__number"
       >
-        {index + 1}
+        {/* {index + 1} */}
+        <img src={imagePath} alt="Cabaña Ana" />
       </button>
     </div>
   );

@@ -1,9 +1,19 @@
 import "./App.css";
 import Carousel from "./components/Carousel";
 
-// const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-const SLIDE_COUNT = 10;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+const cottageImagesPaths = [
+  "/cabañas/cabaña-ana/Baño 2.webp",
+  "/cabañas/cabaña-ana/Baño.webp",
+  "/cabañas/cabaña-ana/Cocina.webp",
+  "/cabañas/cabaña-ana/Dormitorio Principal 2.webp",
+  "/cabañas/cabaña-ana/Dormitorio Principal.webp",
+  "/cabañas/cabaña-ana/Dormitorio Secudario 2.webp",
+  "/cabañas/cabaña-ana/Dormitorio Secudario.webp",
+  "/cabañas/cabaña-ana/Dormitorio Secundario 3.webp",
+  "/cabañas/cabaña-ana/Exterior.webp",
+  "/cabañas/cabaña-ana/Sala de Estar 2.webp",
+  "/cabañas/cabaña-ana/Sala de Estar.webp",
+];
 
 function App() {
   return (
@@ -12,7 +22,7 @@ function App() {
       <h1>CABAÑAS BARILOCHE</h1>
       <h2>Tu lugar en la Patagonia</h2>
 
-      <Carousel slides={SLIDES} />
+      <Carousel images={cottageImagesPaths} />
     </main>
   );
 }
