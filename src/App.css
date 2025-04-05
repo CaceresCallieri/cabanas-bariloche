@@ -17,6 +17,7 @@
 
 .embla__viewport {
   margin-top: 1rem;
+  position: relative;
 }
 
 .embla__container {
@@ -30,6 +31,27 @@
 .embla__slide img {
   border-radius: 0.75rem;
   max-width: 80vw;
+}
+
+.embla-navigation-button {
+  color: black;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+}
+
+.embla-navigation-button:focus {
+  outline: none;
+}
+
+.embla_prev_button {
+  left: 10%;
+}
+
+.embla_next_button {
+  left: 80%;
 }
 
 .embla-thumbs__container {
