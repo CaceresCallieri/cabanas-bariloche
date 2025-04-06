@@ -2,6 +2,8 @@ import React, { useState, useEffect, useCallback } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
+import PreviousSlideButton from "./PreviousSlideButton";
+import NextSlideButton from "./NextSlideButton";
 import { Thumb } from "./CarouselThumbsButton";
 import Arrow from "./Arrow";
 
@@ -72,19 +74,8 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
           ))}
         </div>
 
-        <button
-          className="embla-navigation-button embla_prev_button"
-          onClick={scrollPrev}
-        >
-          <Arrow direction="left" />
-        </button>
-
-        <button
-          className="embla-navigation-button embla_next_button"
-          onClick={scrollNext}
-        >
-          <Arrow direction="right" />
-        </button>
+        <PreviousSlideButton scrollPrev={scrollPrev} />
+        <NextSlideButton scrollNext={scrollNext} />
       </div>
 
       <div className="embla-thumbs">
