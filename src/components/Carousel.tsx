@@ -16,11 +16,11 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { cottageImagesPaths } = props;
+  const { imagesPaths, thumbnailsPaths } = cottageImagesPaths;
+
   const options: EmblaOptionsType = {
     loop: true,
   };
-
-  const { imagesPaths, thumbnailsPaths } = cottageImagesPaths;
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
@@ -50,6 +50,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     emblaMainApi.on("select", onSelect).on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
+  // Scroll between slides
   const scrollPrev = useCallback(() => {
     if (emblaMainApi) emblaMainApi.scrollPrev();
   }, [emblaMainApi]);
@@ -77,6 +78,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
         >
           <Arrow direction="left" />
         </button>
+
         <button
           className="embla-navigation-button embla_next_button"
           onClick={scrollNext}

@@ -10,8 +10,18 @@ export const Thumb: React.FC<PropType> = (props) => {
   const { imagePath, selected, onClick } = props;
 
   return (
-    <button onClick={onClick} type="button" className="embla-thumbs-button">
-      <img src={imagePath} alt="Cabaña Ana" />
-    </button>
+    <div
+      className={"embla-thumbs__slide".concat(
+        selected ? " embla-thumbs__slide__button--selected" : "",
+      )}
+    >
+      <button
+        onClick={onClick}
+        type="button"
+        className="embla-thumbs__slide__button"
+      >
+        <img src={imagePath} alt="" />
+      </button>
+    </div>
   );
 };
