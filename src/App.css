@@ -6,7 +6,6 @@
 
 #root {
   width: 100vw;
-  height: 100vh;
   text-align: center;
   padding: 1rem;
 }
@@ -39,7 +38,7 @@
   border: none;
   cursor: pointer;
   position: absolute;
-  top: 50%;
+  top: 40%;
 }
 
 .embla-navigation-button:focus {
@@ -47,29 +46,32 @@
 }
 
 .embla_prev_button {
-  left: 10%;
+  left: 5%;
 }
 
 .embla_next_button {
-  left: 80%;
+  right: 5%;
 }
 
 .embla-thumbs__container {
   display: flex;
-  justify-content: center;
-  margin-top: 1rem;
-  gap: 0.3rem;
   flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem 1rem 0 1rem;
+  gap: 0.5rem;
 }
 
-.embla-thumbs__slide {
+.embla-thumbs-button {
   cursor: pointer;
-  width: 70px;
-  height: 70px;
+  width: 60px;
+  height: 60px;
+  padding: 0;
 }
 
-.embla-thumbs__slide img {
-  width: 70px;
-  height: 70px;
+.embla-thumbs-button img {
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
   object-fit: cover;
+  margin: 0;
 }

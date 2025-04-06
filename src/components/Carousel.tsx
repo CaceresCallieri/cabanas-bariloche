@@ -5,15 +5,22 @@ import useEmblaCarousel from "embla-carousel-react";
 import { Thumb } from "./CarouselThumbsButton";
 import Arrow from "./Arrow";
 
+type CottageImagePaths = {
+  imagesPaths: string[];
+  thumbnailsPaths: string[];
+};
+
 type PropType = {
-  images: string[];
+  cottageImagesPaths: CottageImagePaths;
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { images } = props;
+  const { cottageImagesPaths } = props;
   const options: EmblaOptionsType = {
     loop: true,
   };
+
+  const { imagesPaths, thumbnailsPaths } = cottageImagesPaths;
 
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
@@ -55,7 +62,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
-          {images.map((imagePath, index) => (
+          {imagesPaths.map((imagePath, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__number">
                 <img src={imagePath} alt="Cabaña Ana" />
@@ -81,7 +88,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
       <div className="embla-thumbs">
         <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
           <div className="embla-thumbs__container">
-            {images.map((imagePath, index) => (
+            {thumbnailsPaths.map((imagePath, index) => (
               <Thumb
                 imagePath={imagePath}
                 selected={index === selectedIndex}
