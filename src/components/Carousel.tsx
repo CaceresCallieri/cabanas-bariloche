@@ -5,7 +5,6 @@ import useEmblaCarousel from "embla-carousel-react";
 import PreviousSlideButton from "./PreviousSlideButton";
 import NextSlideButton from "./NextSlideButton";
 import { Thumb } from "./CarouselThumbsButton";
-import Arrow from "./Arrow";
 
 type CottageImagePaths = {
   imagesPaths: string[];
