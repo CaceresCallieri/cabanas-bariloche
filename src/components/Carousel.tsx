@@ -7,7 +7,7 @@ import NextSlideButton from "./NextSlideButton";
 import { Thumb } from "./CarouselThumbsButton";
 
 type CottageImagePaths = {
-  imagesPaths: string[];
+  mainImagesPaths: string[];
   thumbnailsPaths: string[];
 };
 
@@ -17,7 +17,7 @@ type PropType = {
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
   const { cottageImagesPaths } = props;
-  const { imagesPaths, thumbnailsPaths } = cottageImagesPaths;
+  const { mainImagesPaths, thumbnailsPaths } = cottageImagesPaths;
 
   const options: EmblaOptionsType = {
     loop: true,
@@ -64,7 +64,7 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     <div className="embla">
       <div className="embla__viewport" ref={emblaMainRef}>
         <div className="embla__container">
-          {imagesPaths.map((imagePath, index) => (
+          {mainImagesPaths.map((imagePath, index) => (
             <div className="embla__slide" key={index}>
               <div className="embla__slide__number">
                 <img src={imagePath} alt="Cabaña Ana" />
