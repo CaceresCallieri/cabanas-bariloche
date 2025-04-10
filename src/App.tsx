@@ -4,11 +4,12 @@ import { useState } from "react";
 
 import getCottageImages from "./utils/getCottageImages";
 
-import { Dropdown } from "primereact/dropdown";
 import Carousel from "./components/Carousel";
+import { COTTAGE } from "./types";
+import CottageSelector from "./components/CottageSelector";
 
 const COTTAGE_IMAGES = getCottageImages();
-const COTTAGES = [
+const COTTAGES: COTTAGE[] = [
   { name: "Cabaña Ruben", code: "ruben" },
   { name: "Cabaña Lorenzo", code: "lorenzo" },
   { name: "Cabaña Trinidad", code: "trinidad" },
@@ -26,15 +27,11 @@ function App() {
       <h2>Tu lugar en la Patagonia</h2>
 
       <h3>Elige tu cabaña</h3>
-      <div>
-        <Dropdown
-          value={selectedCottage}
-          onChange={(event) => setSelectedCottage(event.value)}
-          options={COTTAGES}
-          optionLabel="name"
-          placeholder="Seleccione una cabaña"
-        />
-      </div>
+      <CottageSelector
+        selectedCottage={selectedCottage}
+        setSelectedCottage={setSelectedCottage}
+        COTTAGES={COTTAGES}
+      />
 
       <Carousel
         cottageImagesPaths={
