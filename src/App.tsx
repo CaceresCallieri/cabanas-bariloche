@@ -1,14 +1,20 @@
 import "./App.css";
 
 import { useState } from "react";
-import { Dropdown } from "primereact/dropdown";
 
 import getCottageImages from "./utils/getCottageImages";
 
+import { Dropdown } from "primereact/dropdown";
 import Carousel from "./components/Carousel";
 
-const cottageImages = getCottageImages();
-const COTTAGES = ["ruben", "lorenzo", "trinidad", "michelle", "anahi"];
+const COTTAGE_IMAGES = getCottageImages();
+const COTTAGES = [
+  { name: "Cabaña Ruben", code: "ruben" },
+  { name: "Cabaña Lorenzo", code: "lorenzo" },
+  { name: "Cabaña Trinidad", code: "trinidad" },
+  { name: "Cabaña Michelle", code: "michelle" },
+  { name: "Cabaña Anahi", code: "anahi" },
+];
 
 function App() {
   const [selectedCottage, setSelectedCottage] = useState(COTTAGES[0]);
@@ -20,17 +26,21 @@ function App() {
       <h2>Tu lugar en la Patagonia</h2>
 
       <h3>Elige tu cabaña</h3>
-      <div className="card flex justify-content-center">
+      <div>
         <Dropdown
           value={selectedCottage}
-          onChange={(e) => setSelectedCottage(e.value)}
+          onChange={(event) => setSelectedCottage(event.value)}
           options={COTTAGES}
           optionLabel="name"
           placeholder="Seleccione una cabaña"
         />
       </div>
 
-      <Carousel cottageImagesPaths={cottageImages[selectedCottage]} />
+      <Carousel
+        cottageImagesPaths={
+          COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
+        }
+      />
     </main>
   );
 }
