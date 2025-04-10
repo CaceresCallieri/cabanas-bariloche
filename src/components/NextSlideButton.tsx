@@ -11,7 +11,7 @@ const NextSlideButton: React.FC<NextSlideButtonProps> = (props) => {
 
   return (
     <button
-      className="embla-navigation-button embla_next_button"
+      className="carousel-navigation-button carousel_next_button"
       onClick={scrollNext}
     >
       <Arrow direction="right" />

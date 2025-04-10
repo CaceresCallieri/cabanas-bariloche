@@ -10,29 +10,30 @@
   padding: 1rem;
 }
 
-.embla {
+.carousel {
   overflow: hidden;
 }
 
-.embla__viewport {
+.carousel__viewport {
   margin-top: 1rem;
   position: relative;
 }
 
-.embla__container {
+.carousel__container {
   display: flex;
 }
 
-.embla__slide {
+.carousel__slide {
   flex: 0 0 100%;
 }
 
-.embla__slide img {
+.carousel__slide img {
   border-radius: 0.75rem;
   max-width: 80vw;
+  max-height: 80vh;
 }
 
-.embla-navigation-button {
+.carousel-navigation-button {
   color: black;
   opacity: 0.7;
   background-color: transparent;
@@ -42,36 +43,38 @@
   top: 45%;
 }
 
-.embla-navigation-button:focus {
+.carousel-navigation-button:focus {
   outline: none;
 }
 
-.embla_prev_button {
+.carousel_prev_button {
   left: 5%;
 }
 
-.embla_next_button {
+.carousel_next_button {
   right: 5%;
 }
 
-.embla-thumbs {
+.carousel-thumbs {
   --thumbs-slide-spacing: 0.8rem;
   --thumbs-slide-height: 6rem;
   margin-top: var(--thumbs-slide-spacing);
+  margin-bottom: var(--thumbs-slide-spacing);
+  padding: 0 var(--thumbs-slide-spacing);
 }
 
-.embla-thumbs__container {
+.carousel-thumbs__container {
   display: flex;
   flex-direction: row;
   margin-left: calc(var(--thumbs-slide-spacing) * -1);
 }
-.embla-thumbs__slide {
+.carousel-thumbs__slide {
   flex: 0 0 22%;
   min-width: 0;
   padding-left: var(--thumbs-slide-spacing);
 }
 
-.embla-thumbs__slide__button {
+.carousel-thumbs__slide__button {
   border-radius: 0.5rem;
   -webkit-tap-highlight-color: rgba(var(--text-high-contrast-rgb-value), 0.5);
   -webkit-appearance: none;
@@ -87,8 +90,8 @@
   height: 70px;
 }
 
-.embla-thumbs__slide__button img {
-  opacity: 0.7;
+.carousel-thumbs__slide__button img {
+  opacity: 0.6;
   border-radius: 0.5rem;
   width: 100%;
   height: 100%;
@@ -100,17 +103,17 @@
     transform 0.2s ease-out;
 }
 
-.embla-thumbs__slide__button:hover {
+.carousel-thumbs__slide__button:hover {
   opacity: 1;
 }
 
-.embla-thumbs__slide__button--selected img {
+.carousel-thumbs__slide__button--selected img {
   opacity: 1;
   transform: scale(1.2);
 }
 
 @media (min-width: 576px) {
-  .embla-thumbs__slide {
+  .carousel-thumbs__slide {
     flex: 0 0 15%;
   }
 }

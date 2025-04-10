@@ -16,6 +16,8 @@ type PropType = {
 };
 
 const EmblaCarousel: React.FC<PropType> = (props) => {
+  // TODO: Start carousel in the first image when changing selected cottage
+
   const { cottageImagesPaths } = props;
   const { mainImagesPaths, thumbnailsPaths } = cottageImagesPaths;
 
@@ -61,25 +63,25 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   }, [emblaMainApi]);
 
   return (
-    <div className="embla">
-      <div className="embla__viewport" ref={emblaMainRef}>
-        <div className="embla__container">
+    <div className="carousel">
+      <div className="carousel__viewport" ref={emblaMainRef}>
+        <div className="carousel__container">
           {mainImagesPaths.map((imagePath, index) => (
-            <div className="embla__slide" key={index}>
-              <div className="embla__slide__number">
+            <div className="carousel__slide" key={index}>
+              <div className="carousel__slide__number">
                 <img src={imagePath} alt="Cabaña Ana" />
               </div>
             </div>
           ))}
         </div>
 
-        <PreviousSlideButton scrollPrev={scrollPrev} />
-        <NextSlideButton scrollNext={scrollNext} />
+        {/* <PreviousSlideButton scrollPrev={scrollPrev} /> */}
+        {/* <NextSlideButton scrollNext={scrollNext} /> */}
       </div>
 
-      <div className="embla-thumbs">
-        <div className="embla-thumbs__viewport" ref={emblaThumbsRef}>
-          <div className="embla-thumbs__container">
+      <div className="carousel-thumbs">
+        <div className="carousel-thumbs__viewport" ref={emblaThumbsRef}>
+          <div className="carousel-thumbs__container">
             {thumbnailsPaths.map((imagePath, index) => (
               <Thumb
                 imagePath={imagePath}

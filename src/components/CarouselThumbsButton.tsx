@@ -11,14 +11,14 @@ export const Thumb: React.FC<PropType> = (props) => {
 
   return (
     <div
-      className={"embla-thumbs__slide".concat(
-        selected ? " embla-thumbs__slide__button--selected" : "",
+      className={"carousel-thumbs__slide".concat(
+        selected ? " carousel-thumbs__slide__button--selected" : "",
       )}
     >
       <button
         onClick={onClick}
         type="button"
-        className="embla-thumbs__slide__button"
+        className="carousel-thumbs__slide__button"
       >
         <img src={imagePath} alt="" />
       </button>

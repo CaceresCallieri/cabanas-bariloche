@@ -11,7 +11,7 @@ const PreviousSlideButton: React.FC<PreviousSlideButtonProps> = (props) => {
 
   return (
     <button
-      className="embla-navigation-button embla_prev_button"
+      className="carousel-navigation-button carousel_prev_button"
       onClick={scrollPrev}
     >
       <Arrow direction="left" />
