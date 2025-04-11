@@ -1,0 +1,17 @@
+.p-dropdown {
+  background-color: pink;
+  color: black;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+}
+
+.p-dropdown-label {
+  margin-right: 0.5rem;
+}
+
+.p-dropdown-items {
+  padding: 0 0.5rem;
+  background-color: rgba(190, 86, 131, 0.4);
+  color: black;
+  border-radius: 0 0 0.25rem 0.25rem;
+}

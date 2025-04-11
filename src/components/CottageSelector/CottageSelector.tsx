@@ -1,6 +1,7 @@
+import "./CottageSelector.css";
 import React, { Dispatch, SetStateAction } from "react";
 import { Dropdown } from "primereact/dropdown";
-import { COTTAGE } from "../types";
+import { COTTAGE } from "@src/types";
 
 interface CottageSelectorProps {
   selectedCottage: COTTAGE;

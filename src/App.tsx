@@ -6,7 +6,7 @@ import getCottageImages from "./utils/getCottageImages";
 
 import Carousel from "./components/Carousel";
 import { COTTAGE } from "./types";
-import CottageSelector from "./components/CottageSelector";
+import CottageSelector from "./components/CottageSelector/CottageSelector";
 
 const COTTAGE_IMAGES = getCottageImages();
 const COTTAGES: COTTAGE[] = [
