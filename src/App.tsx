@@ -21,24 +21,34 @@ function App() {
   const [selectedCottage, setSelectedCottage] = useState(COTTAGES[0]);
 
   return (
-    <main>
-      <h3>¡Bienvenido!</h3>
-      <h1>CABAÑAS BARILOCHE</h1>
-      <h2>Tu lugar en la Patagonia</h2>
+    <>
+      <header>
+        <h3>¡Bienvenido!</h3>
+        <h1>CABAÑAS BARILOCHE</h1>
+        <h2>Tu lugar en la Patagonia</h2>
 
-      <h3>Elige tu cabaña</h3>
-      <CottageSelector
-        selectedCottage={selectedCottage}
-        setSelectedCottage={setSelectedCottage}
-        COTTAGES={COTTAGES}
-      />
+        <h3>Elige tu cabaña</h3>
+        <CottageSelector
+          selectedCottage={selectedCottage}
+          setSelectedCottage={setSelectedCottage}
+          COTTAGES={COTTAGES}
+        />
+      </header>
 
-      <Carousel
-        cottageImagesPaths={
-          COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
-        }
-      />
-    </main>
+      <main>
+        <Carousel
+          cottageImagesPaths={
+            COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
+          }
+        />
+        map
+      </main>
+
+      <footer>
+        <p>© 2025 Cabañas Bariloche.</p>
+        <p>Desarrollado por Juan Cruz Caceres</p>
+      </footer>
+    </>
   );
 }
 
