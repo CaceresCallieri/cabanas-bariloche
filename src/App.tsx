@@ -7,14 +7,15 @@ import getCottageImages from "./utils/getCottageImages";
 import Carousel from "./components/Carousel";
 import { COTTAGE } from "./types";
 import CottageSelector from "./components/CottageSelector/CottageSelector";
+import Ubication from "./components/Ubication/Ubication";
 
 const COTTAGE_IMAGES = getCottageImages();
 const COTTAGES: COTTAGE[] = [
-  { name: "Cabaña Ruben", code: "ruben" },
-  { name: "Cabaña Lorenzo", code: "lorenzo" },
-  { name: "Cabaña Trinidad", code: "trinidad" },
-  { name: "Cabaña Michelle", code: "michelle" },
-  { name: "Cabaña Anahi", code: "anahi" },
+  { name: "Cabaña Ruben", code: "ruben", ubication: "Belgrano" },
+  { name: "Cabaña Lorenzo", code: "lorenzo", ubication: "Belgrano" },
+  { name: "Cabaña Trinidad", code: "trinidad", ubication: "Belgrano" },
+  { name: "Cabaña Michelle", code: "michelle", ubication: "Belgrano" },
+  { name: "Cabaña Anahi", code: "anahi", ubication: "Las Victorias" },
 ];
 
 function App() {
@@ -41,7 +42,8 @@ function App() {
             COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
           }
         />
-        map
+
+        <Ubication selectedCottage={selectedCottage} />
       </main>
 
       <footer>
