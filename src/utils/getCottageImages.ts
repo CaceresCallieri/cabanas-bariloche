@@ -16,14 +16,16 @@ function getCottageRubenImagesPaths() {
   const mainImages = Object.values(
     import.meta.glob("@assets/cottages/cottage-ruben/main-images/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-ruben/thumbnails/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
@@ -34,14 +36,16 @@ function getCottageLorenzoImagesPaths() {
   const mainImages = Object.values(
     import.meta.glob("@assets/cottages/cottage-lorenzo/main-images/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-lorenzo/thumbnails/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
@@ -52,14 +56,16 @@ function getCottageMichelleImagesPaths() {
   const mainImages = Object.values(
     import.meta.glob("@assets/cottages/cottage-michelle/main-images/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-michelle/thumbnails/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
@@ -70,14 +76,16 @@ function getCottageAnahiImagesPaths() {
   const mainImages = Object.values(
     import.meta.glob("@assets/cottages/cottage-anahi/main-images/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-anahi/thumbnails/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
@@ -88,14 +96,16 @@ function getCottageTrinidadImagesPaths() {
   const mainImages = Object.values(
     import.meta.glob("@assets/cottages/cottage-trinidad/main-images/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-trinidad/thumbnails/*.webp", {
       eager: true,
-      as: "url",
+      query: "?url",
+      import: "default",
     }),
   );
 
