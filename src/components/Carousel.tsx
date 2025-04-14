@@ -62,6 +62,12 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
     if (emblaMainApi) emblaMainApi.scrollNext();
   }, [emblaMainApi]);
 
+  // Scroll back to the beggining of the carousel when changing selected cottage
+  useEffect(() => {
+    console.log("cottage image paths changed, resetting selectedIndex");
+    if (emblaMainApi) emblaMainApi.scrollTo(0);
+  }, [emblaMainApi, cottageImagesPaths]);
+
   return (
     <div className="carousel">
       <div className="carousel__viewport" ref={emblaMainRef}>
