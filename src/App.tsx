@@ -5,45 +5,12 @@ import { useState } from "react";
 import getCottageImages from "./utils/getCottageImages";
 
 import Carousel from "./components/Carousel";
-import { COTTAGE } from "./types";
 import CottageSelector from "./components/CottageSelector/CottageSelector";
 import Ubication from "./components/Ubication/Ubication";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
+import COTTAGES from "./data/cottages";
 
 const COTTAGE_IMAGES = getCottageImages();
-
-const COTTAGES: COTTAGE[] = [
-  {
-    name: "Cabaña Ruben",
-    code: "ruben",
-    ubication: "Belgrano",
-    description: "test",
-  },
-  {
-    name: "Cabaña Lorenzo",
-    code: "lorenzo",
-    ubication: "Belgrano",
-    description: "test",
-  },
-  {
-    name: "Cabaña Trinidad",
-    code: "trinidad",
-    ubication: "Belgrano",
-    description: "test",
-  },
-  {
-    name: "Cabaña Michelle",
-    code: "michelle",
-    ubication: "Belgrano",
-    description: "test",
-  },
-  {
-    name: "Cabaña Anahi",
-    code: "anahi",
-    ubication: "Las Victorias",
-    description: "test",
-  },
-];
 
 function App() {
   const [selectedCottage, setSelectedCottage] = useState(COTTAGES[0]);

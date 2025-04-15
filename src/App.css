@@ -4,18 +4,25 @@
   padding: 0;
 }
 
+/* html, */
+/* body { */
+/*   overflow: hidden; */
+/* } */
+/**/
 body {
-  min-height: 0;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 #root {
-  width: 100dvw;
+  width: 100vw;
   text-align: center;
 }
 
 header {
   background-color: #edc7b7;
   padding: 1rem;
+  padding-bottom: 0;
 }
 
 main {
