@@ -18,11 +18,11 @@ function App() {
   return (
     <>
       <header>
-        <h3>¡Bienvenido!</h3>
+        <h4>¡Bienvenido!</h4>
         <h1>CABAÑAS BARILOCHE</h1>
         <h2>Tu lugar en la Patagonia</h2>
 
-        <h3>Elige tu cabaña</h3>
+        <h3>Elegí tu cabaña</h3>
         <CottageSelector
           selectedCottage={selectedCottage}
           setSelectedCottage={setSelectedCottage}

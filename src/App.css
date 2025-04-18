@@ -4,16 +4,6 @@
   padding: 0;
 }
 
-/* html, */
-/* body { */
-/*   overflow: hidden; */
-/* } */
-/**/
-body {
-  width: 100%;
-  overflow-x: hidden;
-}
-
 #root {
   width: 100vw;
   text-align: center;
@@ -23,6 +13,16 @@ header {
   background-color: #edc7b7;
   padding: 1rem;
   padding-bottom: 0;
+
+  h1,
+  h2,
+  h3 {
+    font-family: "Playfair Display", sans-serif;
+  }
+
+  h3 {
+    margin-top: 0.5rem;
+  }
 }
 
 main {
