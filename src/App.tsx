@@ -4,10 +4,11 @@ import { useState } from "react";
 
 import getCottageImages from "./utils/getCottageImages";
 
-import Carousel from "./components/Carousel";
+import Carousel from "./components/Carousel/Carousel";
 import CottageSelector from "./components/CottageSelector/CottageSelector";
 import Ubication from "./components/Ubication/Ubication";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
+
 import COTTAGES from "./data/cottages";
 
 const COTTAGE_IMAGES = getCottageImages();
@@ -20,9 +21,11 @@ function App() {
       <header>
         <h4>¡Bienvenido!</h4>
         <h1>CABAÑAS BARILOCHE</h1>
-        <h2>Tu lugar en la Patagonia</h2>
+        <p>
+          <strong>Tu lugar en la Patagonia...</strong>
+        </p>
 
-        <h3>Elegí tu cabaña</h3>
+        <h3>Elegí tu cabaña:</h3>
         <CottageSelector
           selectedCottage={selectedCottage}
           setSelectedCottage={setSelectedCottage}
@@ -31,7 +34,7 @@ function App() {
       </header>
 
       <main>
-        <CottageDescription selectedCottage={selectedCottage} />
+        {/* <CottageDescription selectedCottage={selectedCottage} /> */}
 
         <Carousel
           cottageImagesPaths={
