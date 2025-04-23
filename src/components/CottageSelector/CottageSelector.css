@@ -3,8 +3,6 @@
   color: black;
   padding: 0.25rem 0.5rem;
   border-radius: 0.5rem 0.5rem 0 0;
-
-  /* transition: width 0.3s ease; */
 }
 
 .p-dropdown-label {
@@ -15,5 +13,5 @@
   padding: 0 0.5rem;
   background-color: var(--secondary-color);
   color: black;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0.5rem;
 }

@@ -13,12 +13,11 @@ type CottageImagePaths = {
   thumbnailsPaths: string[];
 };
 
-type PropType = {
+type CarouselProps = {
   cottageImagesPaths: CottageImagePaths;
 };
 
-const EmblaCarousel: React.FC<PropType> = (props) => {
-  const { cottageImagesPaths } = props;
+const Carousel: React.FC<CarouselProps> = ({ cottageImagesPaths }) => {
   const { mainImagesPaths, thumbnailsPaths } = cottageImagesPaths;
 
   const options: EmblaOptionsType = {
@@ -103,4 +102,4 @@ const EmblaCarousel: React.FC<PropType> = (props) => {
   );
 };
 
-export default EmblaCarousel;
+export default Carousel;

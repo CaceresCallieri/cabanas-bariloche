@@ -19,7 +19,7 @@ function App() {
   return (
     <>
       <header>
-        <h4>¡Bienvenido!</h4>
+        <h5>¡Bienvenido!</h5>
         <h1>CABAÑAS BARILOCHE</h1>
         <p>
           <strong>Tu lugar en la Patagonia...</strong>
@@ -46,7 +46,7 @@ function App() {
       </main>
 
       <footer>
-        <p>© 2025 Cabañas Bariloche.</p>
+        <p>© {new Date().getFullYear()} Cabañas Bariloche.</p>
         <p>Desarrollado por Juan Cruz Caceres</p>
       </footer>
     </>

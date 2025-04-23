@@ -1,6 +1,6 @@
 :root {
-  --primary-color: #edc7b7;
-  --secondary-color: #fff6ef;
+  --primary-color: #e2f5f0;
+  --secondary-color: #e2f5f0;
 }
 
 * {
@@ -15,9 +15,12 @@
 }
 
 header {
-  background-color: var(--primary-color);
-  /* color: black; */
-  padding: 1rem;
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("./Bariloche.jpg");
+  color: white;
+  background-size: cover;
+  padding: 3rem;
   padding-bottom: 0;
 
   h1,
@@ -34,11 +37,10 @@ header {
 
 main {
   background-color: var(--secondary-color);
-  /* padding: 1rem; */
 }
 
 footer {
-  background-color: var(--primary-color);
+  background-color: #3c8dad;
 }
 
 @media (min-width: 576px) {
