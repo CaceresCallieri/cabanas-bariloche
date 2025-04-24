@@ -24,16 +24,16 @@ function App() {
         <p>
           <strong>Tu lugar en la Patagonia...</strong>
         </p>
+      </header>
 
+      <main>
         <h3>Elegí tu cabaña:</h3>
         <CottageSelector
           selectedCottage={selectedCottage}
           setSelectedCottage={setSelectedCottage}
           COTTAGES={COTTAGES}
         />
-      </header>
 
-      <main>
         {/* <CottageDescription selectedCottage={selectedCottage} /> */}
 
         <Carousel

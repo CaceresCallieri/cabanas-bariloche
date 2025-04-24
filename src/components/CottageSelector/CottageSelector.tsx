@@ -15,6 +15,7 @@ const CottageSelector: React.FC<CottageSelectorProps> = (props) => {
   return (
     <div className="cottage-selector">
       <Dropdown
+        // variant="filled"
         value={selectedCottage}
         onChange={(event) => setSelectedCottage(event.value)}
         options={COTTAGES}

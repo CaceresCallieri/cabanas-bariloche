@@ -1,8 +1,18 @@
+div.cottage-selector {
+  @supports not ((contain: paint) and (not (-moz-appearance: none))) {
+    /* CSS rules here will apply to all browsers except Chromium-based browsers */
+    position: sticky;
+    top: 0;
+    border: 1px solid red;
+    z-index: 1000;
+  }
+}
+
 .p-dropdown {
   background-color: var(--secondary-color);
   color: black;
   padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem 0.5rem 0 0;
+  border-radius: 0.5rem;
 }
 
 .p-dropdown-label {
@@ -10,8 +20,21 @@
 }
 
 .p-dropdown-items {
-  padding: 0 0.5rem;
+  /* padding: 0 0.5rem; */
   background-color: var(--secondary-color);
   color: black;
   border-radius: 0.5rem;
+
+  .p-dropdown-item {
+    padding: 0.5rem 0.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    &:hover {
+      background-color: var(--primary-color);
+    }
+  }
+
+  .p-focus {
+    background-color: red;
+  }
 }

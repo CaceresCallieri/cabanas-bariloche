@@ -1,6 +1,6 @@
 :root {
   --primary-color: #e2f5f0;
-  --secondary-color: #e2f5f0;
+  --secondary-color: #98b8c6;
 }
 
 * {
@@ -10,18 +10,17 @@
 }
 
 #root {
-  width: 100vw;
+  /* width: 100vw; */
   text-align: center;
 }
 
 header {
   background:
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("./Bariloche.jpg");
+    url("./Bariloche.webp");
   color: white;
   background-size: cover;
   padding: 3rem;
-  padding-bottom: 0;
 
   h1,
   h3,
@@ -36,7 +35,12 @@ header {
 }
 
 main {
-  background-color: var(--secondary-color);
+  color: black;
+  background-color: var(--primary-color);
+
+  h3 {
+    font-family: "Playfair Display", sans-serif;
+  }
 }
 
 footer {
