@@ -11,8 +11,8 @@ div.cottage-selector {
 .p-dropdown {
   background-color: var(--secondary-color);
   color: black;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
+  padding: 6px 12px;
+  border-radius: 6px;
 }
 
 .p-dropdown-label {
@@ -20,21 +20,20 @@ div.cottage-selector {
 }
 
 .p-dropdown-items {
-  /* padding: 0 0.5rem; */
   background-color: var(--secondary-color);
   color: black;
-  border-radius: 0.5rem;
+  border-radius: 6px;
 
   .p-dropdown-item {
-    padding: 0.5rem 0.5rem;
-    border-radius: 0.5rem;
+    padding: 2px 12px;
+    border-radius: 12px;
     cursor: pointer;
     &:hover {
       background-color: var(--primary-color);
     }
   }
 
-  .p-focus {
-    background-color: red;
+  .p-highlight {
+    background-color: var(--primary-color);
   }
 }
