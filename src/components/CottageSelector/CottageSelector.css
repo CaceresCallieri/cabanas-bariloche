@@ -3,16 +3,16 @@ div.cottage-selector {
     /* CSS rules here will apply to all browsers except Chromium-based browsers */
     position: sticky;
     top: 0;
-    border: 1px solid red;
     z-index: 1000;
   }
 }
 
 .p-dropdown {
-  background-color: var(--secondary-color);
+  background-color: white;
+  border: 1px solid black;
   color: black;
-  padding: 6px 12px;
-  border-radius: 6px;
+  padding: 4px 12px;
+  border-radius: var(--border-radius-value);
 }
 
 .p-dropdown-label {
@@ -20,13 +20,21 @@ div.cottage-selector {
 }
 
 .p-dropdown-items {
-  background-color: var(--secondary-color);
+  background-color: white;
+  border: 1px solid black;
   color: black;
-  border-radius: 6px;
+  border-radius: var(--border-radius-value);
+
+  /* Correctly round the corners of the first and last items */
+  > *:first-child {
+    border-radius: var(--border-radius-value) var(--border-radius-value) 0 0;
+  }
+  > *:last-child {
+    border-radius: 0 0 var(--border-radius-value) var(--border-radius-value);
+  }
 
   .p-dropdown-item {
     padding: 2px 12px;
-    border-radius: 12px;
     cursor: pointer;
     &:hover {
       background-color: var(--primary-color);

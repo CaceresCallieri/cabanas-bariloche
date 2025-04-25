@@ -21,9 +21,7 @@ function App() {
       <header>
         <h5>¡Bienvenido!</h5>
         <h1>CABAÑAS BARILOCHE</h1>
-        <p>
-          <strong>Tu lugar en la Patagonia...</strong>
-        </p>
+        <h3>Tu lugar en la Patagonia...</h3>
       </header>
 
       <main>
