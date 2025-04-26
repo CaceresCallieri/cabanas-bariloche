@@ -5,31 +5,53 @@ const COTTAGES: COTTAGE[] = [
     name: "Cabaña Ruben",
     code: "ruben",
     ubication: "Belgrano",
-    description: "test",
+    description: [
+      "Living amplio y luminoso con televisor",
+      "Capacidad para 5 personas en 2 habitaciones",
+      "Cocina equipada",
+      "2 baños",
+    ],
   },
   {
     name: "Cabaña Lorenzo",
     code: "lorenzo",
     ubication: "Belgrano",
-    description: "test",
+    description: [
+      "Living amplio con cocina integrada",
+      "2 pisos",
+      "Habitacion amplia con capacidad para 2/3 personas",
+    ],
   },
   {
     name: "Cabaña Trinidad",
     code: "trinidad",
     ubication: "Belgrano",
-    description: "test",
+    description: [
+      "Living con cocina inegrada y televisor",
+      "2 hapitaciones con capacidad para 5 personas",
+      "Baño con bañera",
+    ],
   },
   {
     name: "Cabaña Michelle",
     code: "michelle",
     ubication: "Belgrano",
-    description: "test",
+    description: [
+      "Living con cocina integrada y televisor",
+      "Capacidad para 3 personas",
+      "Baño con bañera",
+    ],
   },
   {
     name: "Cabaña Anahi",
     code: "anahi",
     ubication: "Las Victorias",
-    description: "test",
+    description: [
+      "Living con televisor",
+      "2 habitaciones con capacidad para 6 personas",
+      "Baño completo con bañera",
+      "Acceso a patio exterior",
+    ],
   },
 ];
 
