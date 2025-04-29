@@ -1,8 +1,8 @@
-import "./Ubication.css";
+import "./Location.css";
 import React from "react";
-import { COTTAGE } from "@src/types";
+import { COTTAGE } from "../../types";
 
-interface UbicationProps {
+interface LocationProps {
   selectedCottage: COTTAGE;
 }
 
@@ -13,14 +13,14 @@ const MAP_URLS = {
     "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24037.887097514606!2d-71.27004623029629!3d-41.14029124999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x961a7cc0e5b0be37%3A0x8c1bb83b30603c1b!2sLas%20Victorias%2C%20R8400%20San%20Carlos%20de%20Bariloche%2C%20R%C3%ADo%20Negro!5e0!3m2!1ses!2sar!4v1744675165324!5m2!1ses!2sar",
 };
 
-const Ubication: React.FC<UbicationProps> = ({ selectedCottage }) => (
+const Location: React.FC<LocationProps> = ({ selectedCottage }) => (
   <div className="map-container">
-    <h4>Ubicado en Barrio {selectedCottage.ubication}</h4>
+    <h4>Ubicado en Barrio {selectedCottage.location}</h4>
     <iframe
-      src={MAP_URLS[selectedCottage.ubication as keyof typeof MAP_URLS]}
+      src={MAP_URLS[selectedCottage.location as keyof typeof MAP_URLS]}
       loading="lazy"
     ></iframe>
   </div>
 );
 
-export default Ubication;
+export default Location;

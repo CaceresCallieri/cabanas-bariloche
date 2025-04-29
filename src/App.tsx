@@ -6,7 +6,7 @@ import getCottageImages from "./utils/getCottageImages";
 
 import Carousel from "./components/Carousel/Carousel";
 import CottageSelector from "./components/CottageSelector/CottageSelector";
-import Ubication from "./components/Ubication/Ubication";
+import Location from "./components/Location/Location";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
 
 import COTTAGES from "./data/cottages";
@@ -40,7 +40,7 @@ function App() {
 
         <CottageDescription selectedCottage={selectedCottage} />
 
-        <Ubication selectedCottage={selectedCottage} />
+        <Location selectedCottage={selectedCottage} />
       </main>
 
       <footer>

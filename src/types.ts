@@ -1,6 +1,6 @@
 export interface COTTAGE {
   name: string;
   code: string;
-  ubication: string;
+  location: string;
   description: string[];
 }
