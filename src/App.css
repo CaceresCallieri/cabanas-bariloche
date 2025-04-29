@@ -1,5 +1,5 @@
 :root {
-  --primary-color: #e2f5f0;
+  --primary-color: #222831;
   --secondary-color: #98b8c6;
 
   --border-radius-value: 10px;
@@ -47,7 +47,7 @@ header {
 }
 
 main {
-  color: black;
+  color: white;
   background-color: var(--primary-color);
   padding-top: 12px;
 
@@ -58,7 +58,8 @@ main {
 }
 
 footer {
-  background-color: #3c8dad;
+  padding: 12px;
+  background-color: #1a1a1a;
 }
 
 @media (min-width: 576px) {

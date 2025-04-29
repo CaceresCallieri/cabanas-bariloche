@@ -1,3 +1,7 @@
+:root {
+  --selector-background-color: rgba(255, 255, 255, 0.6);
+}
+
 div.cottage-selector {
   @supports not ((contain: paint) and (not (-moz-appearance: none))) {
     /* CSS rules here will apply to all browsers except Chromium-based browsers */
@@ -8,7 +12,7 @@ div.cottage-selector {
 }
 
 .p-dropdown {
-  background-color: white;
+  background-color: var(--selector-background-color);
   border: 1px solid black;
   color: black;
   padding: 4px 12px;
@@ -20,7 +24,7 @@ div.cottage-selector {
 }
 
 .p-dropdown-items {
-  background-color: white;
+  background-color: var(--selector-background-color);
   border: 1px solid black;
   color: black;
   border-radius: var(--border-radius-value);
@@ -42,6 +46,6 @@ div.cottage-selector {
   }
 
   .p-highlight {
-    background-color: var(--primary-color);
+    background-color: rgba(255, 255, 255, 0.9);
   }
 }
