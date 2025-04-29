@@ -1,11 +1,16 @@
+import "./CottageDescription.css";
 import React from "react";
-import { COTTAGE } from "@src/types";
+import { COTTAGE } from "../../types";
 
 const CottageDescription: React.FC<{ selectedCottage: COTTAGE }> = ({
   selectedCottage,
 }) => (
   <div className="cottage-description">
-    <p>{selectedCottage.description}</p>
+    <ul>
+      {selectedCottage.description.map((sentence, index) => (
+        <li key={index}>{sentence}</li>
+      ))}
+    </ul>
   </div>
 );
 

@@ -32,13 +32,13 @@ function App() {
           COTTAGES={COTTAGES}
         />
 
-        {/* <CottageDescription selectedCottage={selectedCottage} /> */}
-
         <Carousel
           cottageImagesPaths={
             COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
           }
         />
+
+        <CottageDescription selectedCottage={selectedCottage} />
 
         <Ubication selectedCottage={selectedCottage} />
       </main>
