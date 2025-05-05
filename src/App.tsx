@@ -10,6 +10,7 @@ import Location from "./components/Location/Location";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
 
 import COTTAGES from "./data/cottages";
+import ContactSection from "./components/ContactSection/ContactSection";
 
 const COTTAGE_IMAGES = getCottageImages();
 
@@ -44,16 +45,14 @@ function App() {
           setSelectedCottage={setSelectedCottage}
           COTTAGES={COTTAGES}
         />
-
         <Carousel
           cottageImagesPaths={
             COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
           }
         />
-
         <CottageDescription selectedCottage={selectedCottage} />
-
         <Location selectedCottage={selectedCottage} />
+        <ContactSection selectedCottageName={selectedCottage.name} />
       </main>
 
       <footer>

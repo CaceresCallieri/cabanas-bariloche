@@ -1,0 +1,23 @@
+a.contact-us {
+  text-decoration: none;
+  margin: auto;
+
+  border-radius: var(--border-radius-value);
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  background-color: #fff;
+  color: #103928;
+  border: none;
+
+  padding: 8px 16px;
+  font-weight: bold;
+
+  svg {
+    height: 20px;
+    width: 20px;
+  }
+}
