@@ -1,7 +1,6 @@
 import "./App.css";
 
 import { useState } from "react";
-import { motion } from "motion/react";
 import getCottageImages from "./utils/getCottageImages";
 
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -23,19 +22,26 @@ function App() {
       <HeroSection />
 
       <main>
-        <h3>Elegí tu cabaña:</h3>
+        <h3 className="with-decorative-line">Elegí tu cabaña:</h3>
         <CottageSelector
           selectedCottage={selectedCottage}
           setSelectedCottage={setSelectedCottage}
           COTTAGES={COTTAGES}
         />
-        <Carousel
-          cottageImagesPaths={
-            COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES]
-          }
-        />
-        <CottageDescription selectedCottage={selectedCottage} />
+
+        <div className="carousel-and-description-container">
+          <Carousel
+            cottageImagesPaths={
+              COTTAGE_IMAGES[
+                selectedCottage.code as keyof typeof COTTAGE_IMAGES
+              ]
+            }
+          />
+          <CottageDescription selectedCottage={selectedCottage} />
+        </div>
+
         <Location selectedCottage={selectedCottage} />
+
         <ContactSection selectedCottageName={selectedCottage.name} />
       </main>
 
