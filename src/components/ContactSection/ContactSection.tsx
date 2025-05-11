@@ -1,5 +1,6 @@
 import "./ContactSection.css";
 import WhatsAppIcon from "../../assets/Whatsapp Icon.svg?react";
+import { motion } from "motion/react";
 
 interface ContactSectionProps {
   selectedCottageName: string;
@@ -17,15 +18,18 @@ const ContactSection: React.FC<ContactSectionProps> = ({
 
   return (
     /* TODO: Select days to stay and number of guests */
-    <a
+    <motion.a
       className="contact-us"
+      type="button"
       aria-label="Chat on WhatsApp"
       target="_blank"
       href={getWhatsAppLink(selectedCottageName)}
+      whileHover={{ scale: 1.05 }}
+      whileTap={{ scale: 0.95 }}
     >
       <WhatsAppIcon />
       Contactanos!
-    </a>
+    </motion.a>
   );
 };
 
