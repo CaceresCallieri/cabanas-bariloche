@@ -15,7 +15,7 @@ const MAP_URLS = {
 
 const Location: React.FC<LocationProps> = ({ selectedCottage }) => (
   <div className="map-container">
-    <h4>Ubicado en Barrio {selectedCottage.location}</h4>
+    <h4>Ubicada en Barrio {selectedCottage.location}</h4>
     <iframe
       src={MAP_URLS[selectedCottage.location as keyof typeof MAP_URLS]}
       loading="lazy"
