@@ -1,5 +1,5 @@
 :root {
-  --selector-background-color: rgba(255, 255, 255, 0.6);
+  --selector-background-color: #faf9f6;
 }
 
 div.cottage-selector {
@@ -41,11 +41,11 @@ div.cottage-selector {
     padding: 2px 12px;
     cursor: pointer;
     &:hover {
-      background-color: var(--primary-color);
+      background-color: skyblue;
     }
   }
 
-  .p-highlight {
-    background-color: rgba(255, 255, 255, 0.9);
-  }
+  /* .p-highlight { */
+  /*   background-color: rgba(255, 255, 255, 0.9); */
+  /* } */
 }
