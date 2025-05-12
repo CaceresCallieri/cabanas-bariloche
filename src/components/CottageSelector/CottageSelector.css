@@ -3,10 +3,20 @@
 }
 
 div.cottage-selector {
+  position: relative;
   @supports not ((contain: paint) and (not (-moz-appearance: none))) {
     /* CSS rules here will apply to all browsers except Chromium-based browsers */
     position: sticky;
     top: 0;
+    z-index: 1000;
+  }
+
+  svg.house-icon {
+    position: absolute;
+    top: 3px;
+    left: calc(50% - 76px); /* Center the icon */
+    width: 24px;
+    height: 24px;
     z-index: 1000;
   }
 }
@@ -16,6 +26,7 @@ div.cottage-selector {
   border: 1px solid black;
   color: black;
   padding: 4px 12px;
+  padding-left: 32px; /* Space for the icon */
   border-radius: var(--border-radius-value);
 }
 
@@ -39,6 +50,7 @@ div.cottage-selector {
 
   .p-dropdown-item {
     padding: 2px 12px;
+    padding-left: 24px; /* Center with regards with dropdown icon */
     cursor: pointer;
     &:hover {
       background-color: skyblue;
