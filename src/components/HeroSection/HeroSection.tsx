@@ -10,7 +10,7 @@ const HeroSection = () => {
   return (
     <header>
       <h5>¡Bienvenido!</h5>
-      <h1>CABAÑAS BARILOCHE</h1>
+      <h1 className="with-decorative-line">CABAÑAS BARILOCHE</h1>
       <h3>
         {subHeaderText.split("").map((letter, index, array) => {
           // Calculate the delay using the easing function
