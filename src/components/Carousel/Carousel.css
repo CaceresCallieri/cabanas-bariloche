@@ -60,6 +60,7 @@
 .carousel-thumbs__slide {
   flex: 0 0 22%;
   min-width: 0;
+  max-width: 100px;
   padding-left: var(--thumbs-slide-spacing);
 }
 
