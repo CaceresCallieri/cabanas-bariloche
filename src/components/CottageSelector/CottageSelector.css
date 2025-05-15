@@ -26,7 +26,7 @@ div.cottage-selector {
   border: 1px solid black;
   color: black;
   padding: 4px 12px;
-  padding-left: 32px; /* Space for the icon */
+  /* padding-left: 32px; /* Space for the icon */
   border-radius: var(--border-radius-value);
 }
 
@@ -50,7 +50,7 @@ div.cottage-selector {
 
   .p-dropdown-item {
     padding: 2px 12px;
-    padding-left: 24px; /* Center with regards with dropdown icon */
+    /* padding-left: 24px; /* Center with regards with dropdown icon */
     cursor: pointer;
     &:hover {
       background-color: skyblue;
