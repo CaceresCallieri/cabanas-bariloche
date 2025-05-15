@@ -10,7 +10,8 @@ const ContactSection: React.FC<ContactSectionProps> = ({
   selectedCottageName,
 }) => {
   function getWhatsAppLink(selectedCottageName: string) {
-    const message = `Hola! Quiero saber mas sobre la ${selectedCottageName}.`;
+    // TODO: Infer number of guests from cottage data
+    const message = `Hola! Quiero saber mas sobre la ${selectedCottageName}. Me interesa una estadia durante los dias ___ y ___, para _ personas.`;
     const phoneNumber = "5492944365434";
     const encodedMessage = encodeURIComponent(message);
     return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
