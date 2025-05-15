@@ -12,7 +12,7 @@ const CottageDescription: React.FC<{ selectedCottage: COTTAGE }> = ({
       ))}
       {selectedCottage.location === "Belgrano" && (
         <li key={selectedCottage.code}>
-          Ubicación céntrica, ideal para explorar la ciudad
+          Ubicación céntrica, ideal para explorar la ciudad.
         </li>
       )}
     </ul>
