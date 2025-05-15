@@ -24,7 +24,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({
       aria-label="Chat on WhatsApp"
       target="_blank"
       href={getWhatsAppLink(selectedCottageName)}
-      whileHover={{ scale: 1.05 }}
+      whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
       <WhatsAppIcon />
