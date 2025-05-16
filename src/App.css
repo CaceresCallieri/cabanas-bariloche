@@ -51,6 +51,12 @@ footer {
   .carousel-thumbs__slide {
     flex: 0 0 15%;
   }
+
+  footer {
+    padding: 8px 12px;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 @media (min-width: 1024px) {
