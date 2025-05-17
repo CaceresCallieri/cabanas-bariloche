@@ -5,6 +5,7 @@ const getCottageImages = () => {
     michelle: getCottageMichelleImagesPaths(),
     anahi: getCottageAnahiImagesPaths(),
     trinidad: getCottageTrinidadImagesPaths(),
+    gonzalo: getCottageGonzaloImagesPaths(),
   };
 
   return cottageImages;
@@ -103,6 +104,26 @@ function getCottageTrinidadImagesPaths() {
 
   const thumbnails = Object.values(
     import.meta.glob("@assets/cottages/cottage-trinidad/thumbnails/*.webp", {
+      eager: true,
+      query: "?url",
+      import: "default",
+    }),
+  );
+
+  return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
+}
+
+function getCottageGonzaloImagesPaths() {
+  const mainImages = Object.values(
+    import.meta.glob("@assets/cottages/cottage-gonzalo/main-images/*.webp", {
+      eager: true,
+      query: "?url",
+      import: "default",
+    }),
+  );
+
+  const thumbnails = Object.values(
+    import.meta.glob("@assets/cottages/cottage-gonzalo/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",

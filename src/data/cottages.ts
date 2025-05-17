@@ -47,6 +47,17 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
+    name: "Cabaña Gonzalo",
+    code: "gonzalo",
+    location: "Belgrano",
+    description: [
+      "Espacio ideal con dos habitaciones para 4 personas, cómodo y funcional.",
+      "Baño con bañera para disfrutar de un merecido descanso.",
+      "Ambiente integrado con living y cocina.",
+      "Estacionamiento techado incluido para tu vehículo.",
+    ],
+  },
+  {
     name: "Cabaña Anahi",
     code: "anahi",
     location: "Las Victorias",
