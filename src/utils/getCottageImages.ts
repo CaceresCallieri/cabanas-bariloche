@@ -1,11 +1,11 @@
 const getCottageImages = () => {
   const cottageImages = {
-    ruben: getCottageRubenImagesPaths(),
-    lorenzo: getCottageLorenzoImagesPaths(),
-    michelle: getCottageMichelleImagesPaths(),
-    anahi: getCottageAnahiImagesPaths(),
-    trinidad: getCottageTrinidadImagesPaths(),
-    gonzalo: getCottageGonzaloImagesPaths(),
+    mascardi: getCottageMascardiImagesPaths(),
+    otto: getCottageOttoImagesPaths(),
+    huapi: getCottageHuapiImagesPaths(),
+    catedral: getCottageCatedralImagesPaths(),
+    frey: getCottageFreyImagesPaths(),
+    moreno: getCottageMorenoImagesPaths(),
   };
 
   return cottageImages;
@@ -13,9 +13,9 @@ const getCottageImages = () => {
 
 export default getCottageImages;
 
-function getCottageRubenImagesPaths() {
+function getCottageMascardiImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-ruben/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-mascardi/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -23,7 +23,7 @@ function getCottageRubenImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-ruben/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-mascardi/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -33,9 +33,9 @@ function getCottageRubenImagesPaths() {
   return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
 }
 
-function getCottageLorenzoImagesPaths() {
+function getCottageOttoImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-lorenzo/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-otto/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -43,7 +43,7 @@ function getCottageLorenzoImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-lorenzo/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-otto/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -53,9 +53,9 @@ function getCottageLorenzoImagesPaths() {
   return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
 }
 
-function getCottageMichelleImagesPaths() {
+function getCottageHuapiImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-michelle/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-huapi/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -63,7 +63,7 @@ function getCottageMichelleImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-michelle/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-huapi/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -73,9 +73,9 @@ function getCottageMichelleImagesPaths() {
   return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
 }
 
-function getCottageAnahiImagesPaths() {
+function getCottageCatedralImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-anahi/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-catedral/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -83,7 +83,7 @@ function getCottageAnahiImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-anahi/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-catedral/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -93,9 +93,9 @@ function getCottageAnahiImagesPaths() {
   return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
 }
 
-function getCottageTrinidadImagesPaths() {
+function getCottageFreyImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-trinidad/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-frey/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -103,7 +103,7 @@ function getCottageTrinidadImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-trinidad/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-frey/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -113,9 +113,9 @@ function getCottageTrinidadImagesPaths() {
   return { mainImagesPaths: mainImages, thumbnailsPaths: thumbnails };
 }
 
-function getCottageGonzaloImagesPaths() {
+function getCottageMorenoImagesPaths() {
   const mainImages = Object.values(
-    import.meta.glob("@assets/cottages/cottage-gonzalo/main-images/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-moreno/main-images/*.webp", {
       eager: true,
       query: "?url",
       import: "default",
@@ -123,7 +123,7 @@ function getCottageGonzaloImagesPaths() {
   );
 
   const thumbnails = Object.values(
-    import.meta.glob("@assets/cottages/cottage-gonzalo/thumbnails/*.webp", {
+    import.meta.glob("@assets/cottages/cottage-moreno/thumbnails/*.webp", {
       eager: true,
       query: "?url",
       import: "default",

@@ -2,8 +2,8 @@ import { COTTAGE } from "../types";
 
 const COTTAGES: COTTAGE[] = [
   {
-    name: "Cabaña Ruben",
-    code: "ruben",
+    name: "Cabaña Mascardi",
+    code: "mascardi",
     location: "Belgrano",
     description: [
       "Confort para hasta 5 personas en 2 cómodas habitaciones.",
@@ -14,8 +14,8 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
-    name: "Cabaña Lorenzo",
-    code: "lorenzo",
+    name: "Cabaña Otto",
+    code: "otto",
     location: "Belgrano",
     description: [
       "Habitación amplia con capacidad para 2 a 3 personas.",
@@ -25,8 +25,8 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
-    name: "Cabaña Trinidad",
-    code: "trinidad",
+    name: "Cabaña Frey",
+    code: "frey",
     location: "Belgrano",
     description: [
       "Dos habitaciones confortables para hasta 5 huéspedes.",
@@ -36,8 +36,8 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
-    name: "Cabaña Michelle",
-    code: "michelle",
+    name: "Cabaña Huapi",
+    code: "huapi",
     location: "Belgrano",
     description: [
       "Espacio ideal para 3 personas, cómodo y funcional.",
@@ -47,8 +47,8 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
-    name: "Cabaña Gonzalo",
-    code: "gonzalo",
+    name: "Cabaña Moreno",
+    code: "moreno",
     location: "Belgrano",
     description: [
       "Espacio ideal con dos habitaciones para 4 personas, cómodo y funcional.",
@@ -58,8 +58,8 @@ const COTTAGES: COTTAGE[] = [
     ],
   },
   {
-    name: "Cabaña Anahi",
-    code: "anahi",
+    name: "Cabaña Catedral",
+    code: "catedral",
     location: "Las Victorias",
     description: [
       "Dos habitaciones amplias con capacidad para 6 personas.",
