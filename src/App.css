@@ -35,10 +35,20 @@ main {
   background-color: var(--primary-color);
   padding-top: 12px;
   padding-bottom: 24px;
+  height: fit-content;
+  position: relative;
 
   h3 {
     font-family: "Playfair Display", sans-serif;
     font-size: 16px;
+  }
+
+  .curtain {
+    z-index: 1000;
+    width: 100%;
+    background-color: var(--primary-color);
+    mask-image: linear-gradient(var(--primary-color) 85%, transparent 95%);
+    position: absolute;
   }
 }
 

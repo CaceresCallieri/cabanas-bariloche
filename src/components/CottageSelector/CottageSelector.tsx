@@ -8,7 +8,9 @@ import { COTTAGE } from "../../types";
 
 interface CottageSelectorProps {
   selectedCottage: COTTAGE;
-  setSelectedCottage: Dispatch<SetStateAction<COTTAGE>>;
+  setSelectedCottage:
+    | Dispatch<SetStateAction<COTTAGE>>
+    | ((newCottage: COTTAGE) => void);
   COTTAGES: COTTAGE[];
 }
 
@@ -20,7 +22,11 @@ const CottageSelector: React.FC<CottageSelectorProps> = (props) => {
       {/* <HouseIcon className="house-icon" /> */}
       <Dropdown
         value={selectedCottage}
-        onChange={(event) => setSelectedCottage(event.value)}
+        onChange={(event) => {
+          if (typeof setSelectedCottage === "function") {
+            setSelectedCottage(event.value);
+          }
+        }}
         options={COTTAGES}
         optionLabel="name"
         placeholder="Seleccione una cabaña"

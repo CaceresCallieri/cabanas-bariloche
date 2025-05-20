@@ -4,8 +4,6 @@ import React, { useState, useEffect, useCallback } from "react";
 import { EmblaOptionsType } from "embla-carousel";
 import useEmblaCarousel from "embla-carousel-react";
 
-import PreviousSlideButton from "./PreviousSlideButton";
-import NextSlideButton from "./NextSlideButton";
 import { Thumb } from "./CarouselThumbsButton";
 
 type CottageImagePaths = {
@@ -52,15 +50,6 @@ const Carousel: React.FC<CarouselProps> = ({ cottageImagesPaths }) => {
     emblaMainApi.on("select", onSelect).on("reInit", onSelect);
   }, [emblaMainApi, onSelect]);
 
-  // Scroll between slides
-  const scrollPrev = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollPrev();
-  }, [emblaMainApi]);
-
-  const scrollNext = useCallback(() => {
-    if (emblaMainApi) emblaMainApi.scrollNext();
-  }, [emblaMainApi]);
-
   // Scroll back to the beggining of the carousel when changing selected cottage
   useEffect(() => {
     console.log("cottage image paths changed, resetting selectedIndex");
@@ -79,9 +68,6 @@ const Carousel: React.FC<CarouselProps> = ({ cottageImagesPaths }) => {
             </div>
           ))}
         </div>
-
-        {/* <PreviousSlideButton scrollPrev={scrollPrev} /> */}
-        {/* <NextSlideButton scrollNext={scrollNext} /> */}
       </div>
 
       <div className="carousel-thumbs">
