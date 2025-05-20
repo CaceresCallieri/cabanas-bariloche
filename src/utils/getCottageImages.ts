@@ -1,17 +1,35 @@
 const getCottageImages = () => {
   const cottageImages = {
-    mascardi: getCottageMascardiImagesPaths(),
-    otto: getCottageOttoImagesPaths(),
-    huapi: getCottageHuapiImagesPaths(),
-    catedral: getCottageCatedralImagesPaths(),
-    frey: getCottageFreyImagesPaths(),
-    moreno: getCottageMorenoImagesPaths(),
+    mascardi: validateCottageImagePaths(getCottageMascardiImagesPaths()),
+    otto: validateCottageImagePaths(getCottageOttoImagesPaths()),
+    huapi: validateCottageImagePaths(getCottageHuapiImagesPaths()),
+    catedral: validateCottageImagePaths(getCottageCatedralImagesPaths()),
+    frey: validateCottageImagePaths(getCottageFreyImagesPaths()),
+    moreno: validateCottageImagePaths(getCottageMorenoImagesPaths()),
   };
 
   return cottageImages;
 };
 
 export default getCottageImages;
+
+// Validation function for CottageImagePaths
+function validateCottageImagePaths(data: any): {
+  mainImagesPaths: string[];
+  thumbnailsPaths: string[];
+} {
+  if (
+    data &&
+    Array.isArray(data.mainImagesPaths) &&
+    data.mainImagesPaths.every((item) => typeof item === "string") &&
+    Array.isArray(data.thumbnailsPaths) &&
+    data.thumbnailsPaths.every((item) => typeof item === "string")
+  ) {
+    return data;
+  } else {
+    throw new Error("Invalid CottageImagePaths data");
+  }
+}
 
 function getCottageMascardiImagesPaths() {
   const mainImages = Object.values(
