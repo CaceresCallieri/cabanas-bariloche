@@ -17,6 +17,11 @@ interface CottageSelectorProps {
 const CottageSelector: React.FC<CottageSelectorProps> = (props) => {
   const { selectedCottage, setSelectedCottage, COTTAGES } = props;
 
+  // Avoid showing the selected cottage as an option in the dropdown
+  const filteredCottages = COTTAGES.filter(
+    (cottage) => cottage.code !== selectedCottage.code,
+  );
+
   return (
     <div className="cottage-selector">
       {/* <HouseIcon className="house-icon" /> */}
@@ -27,9 +32,9 @@ const CottageSelector: React.FC<CottageSelectorProps> = (props) => {
             setSelectedCottage(event.value);
           }
         }}
-        options={COTTAGES}
+        options={filteredCottages}
         optionLabel="name"
-        placeholder="Seleccione una cabaña"
+        placeholder={selectedCottage.name}
       />
     </div>
   );
