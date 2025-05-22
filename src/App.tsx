@@ -15,7 +15,7 @@ import COTTAGES from "./data/cottages";
 import { COTTAGE } from "./types";
 
 const COTTAGE_IMAGES = getCottageImages();
-const CURTAIN_ANIMATION_DURATION = 1000; // Duration in milliseconds
+const CURTAIN_ANIMATION_DURATION = 750; // Duration in milliseconds
 
 function App() {
   const [selectedCottage, setSelectedCottage] = useState<COTTAGE>(COTTAGES[0]);
@@ -29,7 +29,7 @@ function App() {
     setSelectedCottage(newCottage);
     setTimeout(() => {
       setIsCurtainAnimating(false);
-    }, 1000); // Match the curtain animation duration
+    }, CURTAIN_ANIMATION_DURATION);
   };
 
   return (
