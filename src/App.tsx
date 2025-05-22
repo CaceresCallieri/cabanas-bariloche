@@ -47,7 +47,7 @@ function App() {
         <motion.div
           className="curtain"
           initial={{ height: "0%" }}
-          animate={isCurtainAnimating ? { height: "100%" } : { height: "0%" }}
+          animate={isCurtainAnimating ? { height: "110%" } : { height: "0%" }}
           transition={{
             duration: CURTAIN_ANIMATION_DURATION / 1000,
             ease: [0.25, 0.1, 0.25, 1],
