@@ -23,7 +23,6 @@ div.cottage-selector {
 
 .p-dropdown {
   background-color: var(--selector-background-color);
-  border: 1px solid black;
   color: black;
   padding: 4px 12px;
   /* padding-left: 32px; /* Space for the icon */
@@ -36,7 +35,6 @@ div.cottage-selector {
 
 .p-dropdown-items {
   background-color: var(--selector-background-color);
-  border: 1px solid black;
   color: black;
   border-radius: var(--border-radius-value);
 
