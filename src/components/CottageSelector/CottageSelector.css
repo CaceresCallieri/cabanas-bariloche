@@ -24,19 +24,26 @@ div.cottage-selector {
 .p-dropdown {
   background-color: var(--selector-background-color);
   color: black;
-  padding: 4px 12px;
+  padding: 4px 8px 4px 4px;
   /* padding-left: 32px; /* Space for the icon */
   border-radius: var(--border-radius-value);
 }
 
 .p-dropdown-label {
   margin-right: 0.5rem;
+  padding-left: 24px;
+
+  background-image: url("../../assets/house.png");
+  background-position: left 1px;
+  background-repeat: no-repeat;
+  background-size: 20px;
 }
 
 .p-dropdown-items {
   background-color: var(--selector-background-color);
   color: black;
   border-radius: var(--border-radius-value);
+  /* padding-left: 18px; */
 
   /* Correctly round the corners of the first and last items */
   > *:first-child {
@@ -46,16 +53,12 @@ div.cottage-selector {
     border-radius: 0 0 var(--border-radius-value) var(--border-radius-value);
   }
 
-  .p-dropdown-item {
-    padding: 2px 12px;
-    /* padding-left: 24px; /* Center with regards with dropdown icon */
+  li.p-dropdown-item {
     cursor: pointer;
+    text-align: center;
+
     &:hover {
       background-color: skyblue;
     }
   }
-
-  /* .p-highlight { */
-  /*   background-color: rgba(255, 255, 255, 0.9); */
-  /* } */
 }
