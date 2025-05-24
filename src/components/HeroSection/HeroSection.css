@@ -18,6 +18,7 @@ header {
   h3,
   h5 {
     font-family: "Playfair Display", sans-serif;
+    z-index: 100;
   }
 
   h1 {
@@ -31,4 +32,25 @@ header {
     font-size: 1rem;
     margin-top: 16px;
   }
+}
+
+/* Snowflakes container */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none; /* Prevent interaction with snowflakes */
+}
+
+/* Individual snowflake */
+.snowflake {
+  position: absolute;
+  top: -10px; /* Start above the header */
+  background-color: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  filter: blur(1px);
 }
