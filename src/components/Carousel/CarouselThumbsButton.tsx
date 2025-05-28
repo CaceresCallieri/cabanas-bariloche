@@ -1,4 +1,5 @@
 import React from "react";
+import { motion } from "motion/react";
 
 type PropType = {
   imagePath: string;
@@ -15,13 +16,15 @@ export const Thumb: React.FC<PropType> = (props) => {
         selected ? " carousel-thumbs__slide__button--selected" : "",
       )}
     >
-      <button
+      <motion.button
         onClick={onClick}
         type="button"
         className="carousel-thumbs__slide__button"
+        whileHover={{ scale: 1.08 }}
+        whileTap={{ scale: 0.95 }}
       >
         <img src={imagePath} alt="" />
-      </button>
+      </motion.button>
     </div>
   );
 };
