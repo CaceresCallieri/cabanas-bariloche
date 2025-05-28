@@ -33,25 +33,3 @@ header {
     margin-top: 16px;
   }
 }
-
-/* Snowflakes container */
-.snowflakes {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  pointer-events: none; /* Prevent interaction with snowflakes */
-}
-
-/* Individual snowflake */
-.snowflake {
-  position: absolute;
-  top: -10px; /* Start above the header */
-  /* background-color: white; */
-  background-image: url("../../assets/snowflake.webp");
-  background-size: cover;
-  border-radius: 50%;
-  opacity: 0.8;
-}
