@@ -49,8 +49,9 @@ header {
 .snowflake {
   position: absolute;
   top: -10px; /* Start above the header */
-  background-color: white;
+  /* background-color: white; */
+  background-image: url("../../assets/snowflake.webp");
+  background-size: cover;
   border-radius: 50%;
   opacity: 0.8;
-  filter: blur(1px);
 }
