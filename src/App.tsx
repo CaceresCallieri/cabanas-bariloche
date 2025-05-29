@@ -10,6 +10,7 @@ import Carousel from "./components/Carousel/Carousel";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
 import Location from "./components/Location/Location";
 import ContactSection from "./components/ContactSection/ContactSection";
+import Footer from "./components/Footer/Footer";
 
 import COTTAGES from "./data/cottages";
 import { COTTAGE } from "./types";
@@ -64,10 +65,7 @@ function App() {
         <ContactSection selectedCottageName={selectedCottage.name} />
       </main>
 
-      <footer>
-        <p>© {new Date().getFullYear()} Cabañas Bariloche.</p>
-        <p>Desarrollado por Juan Cruz Caceres</p>
-      </footer>
+      <Footer />
     </>
   );
 }
