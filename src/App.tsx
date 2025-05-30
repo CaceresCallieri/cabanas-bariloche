@@ -2,10 +2,10 @@ import "./App.css";
 
 import { useState } from "react";
 import getCottageImages from "./utils/getCottageImages";
-import { motion } from "motion/react";
 
 import HeroSection from "./components/HeroSection/HeroSection";
 import CottageSelector from "./components/CottageSelector/CottageSelector";
+import CurtainEffect from "./components/CurtainEffect/CurtainEffect";
 import Carousel from "./components/Carousel/Carousel";
 import CottageDescription from "./components/CottageDescription/CottageDescription";
 import Location from "./components/Location/Location";
@@ -45,15 +45,10 @@ function App() {
           COTTAGES={COTTAGES}
         />
 
-        <motion.div
-          className="curtain"
-          initial={{ height: "0%" }}
-          animate={isCurtainAnimating ? { height: "100%" } : { height: "0%" }}
-          transition={{
-            duration: CURTAIN_ANIMATION_DURATION / 1000,
-            ease: [0.25, 0.1, 0.25, 1],
-          }}
-        ></motion.div>
+        <CurtainEffect
+          isCurtainAnimating={isCurtainAnimating}
+          CURTAIN_ANIMATION_DURATION={CURTAIN_ANIMATION_DURATION}
+        />
 
         <div className="carousel-and-description-container">
           <Carousel cottageImagesPaths={cottageImagesPaths} />
