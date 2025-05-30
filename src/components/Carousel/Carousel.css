@@ -13,7 +13,14 @@
 
 .carousel__slide {
   flex: 0 0 100%;
-  cursor: grab;
+
+  :hover {
+    cursor: grab;
+  }
+
+  :active {
+    cursor: grabbing;
+  }
 }
 
 .carousel__slide img {
