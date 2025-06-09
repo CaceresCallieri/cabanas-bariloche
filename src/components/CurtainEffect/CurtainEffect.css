@@ -1,7 +1,7 @@
 .curtain {
-  z-index: 1000;
-  width: 100%;
-  background-color: var(--primary-color);
-  mask-image: linear-gradient(var(--primary-color) 85%, transparent 95%);
-  position: absolute;
+	z-index: 1000;
+	width: 100%;
+	background-color: var(--primary-color);
+	mask-image: linear-gradient(var(--primary-color) 85%, transparent 95%);
+	position: absolute;
 }

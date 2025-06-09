@@ -1,29 +1,29 @@
 .map-container {
-  width: 100%;
-  padding: 16px;
-  color: white;
+	width: 100%;
+	padding: 16px;
+	color: white;
 
-  h4 {
-    font-family: "Playfair Display", sans-serif;
-    font-size: 16px;
-  }
+	h4 {
+		font-family: "Playfair Display", sans-serif;
+		font-size: 16px;
+	}
 
-  iframe {
-    width: 100%;
-    aspect-ratio: 1 / 1;
-    border: 0;
-    border-radius: var(--border-radius-value);
-  }
+	iframe {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		border: 0;
+		border-radius: var(--border-radius-value);
+	}
 }
 
 @media (min-width: 1028px) {
-  .map-container {
-    h4 {
-      font-size: 18px;
-    }
+	.map-container {
+		h4 {
+			font-size: 18px;
+		}
 
-    iframe {
-      width: 50%;
-    }
-  }
+		iframe {
+			width: 50%;
+		}
+	}
 }
