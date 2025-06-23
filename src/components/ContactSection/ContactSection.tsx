@@ -2,14 +2,10 @@ import "./ContactSection.css";
 import WhatsAppIcon from "../../assets/Whatsapp Icon.svg?react";
 import { motion } from "motion/react";
 
-interface ContactSectionProps {
-	selectedCottageName: string;
-}
-
-const ContactSection: React.FC<ContactSectionProps> = ({ selectedCottageName }) => {
-	function getWhatsAppLink(selectedCottageName: string) {
+const ContactSection = () => {
+	function getWhatsAppLink() {
 		// TODO: Infer number of guests from cottage data
-		const message = `Hola! Quiero saber mas sobre la ${selectedCottageName}. Me interesa una estadia durante los dias ___ y ___, para _ personas.`;
+		const message = `Hola! Me interesa una estadia entre los dias ___ y ___, para _ personas. ¿Que cabañas se encuentran disponibles?`;
 		const phoneNumber = "5492944365434";
 		const encodedMessage = encodeURIComponent(message);
 		return `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
@@ -22,7 +18,7 @@ const ContactSection: React.FC<ContactSectionProps> = ({ selectedCottageName }) 
 			type="button"
 			aria-label="Chat on WhatsApp"
 			target="_blank"
-			href={getWhatsAppLink(selectedCottageName)}
+			href={getWhatsAppLink()}
 			whileHover={{ scale: 1.1 }}
 			whileTap={{ scale: 0.95 }}
 		>
