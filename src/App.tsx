@@ -19,13 +19,10 @@ const COTTAGE_IMAGES = getCottageImages();
 const CURTAIN_ANIMATION_DURATION = 750; // Duration in milliseconds
 
 function App() {
-	const [selectedCottage, setSelectedCottage] = useState<COTTAGE>(
-		COTTAGES[0],
-	);
+	const [selectedCottage, setSelectedCottage] = useState<COTTAGE>(COTTAGES[0]);
 	const [isCurtainAnimating, setIsCurtainAnimating] = useState(false);
 
-	const cottageImagesPaths =
-		COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES];
+	const cottageImagesPaths = COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES];
 
 	const handleCottageChange = (newCottage: COTTAGE) => {
 		setIsCurtainAnimating(true);

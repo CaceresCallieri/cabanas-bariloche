@@ -65,11 +65,7 @@ main {
 
 			.carousel {
 				flex: 0 0 60%;
-				mask-image: linear-gradient(
-					90deg,
-					var(--primary-color) 50%,
-					transparent 95%
-				);
+				mask-image: linear-gradient(90deg, var(--primary-color) 50%, transparent 95%);
 			}
 
 			.cottage-description {
