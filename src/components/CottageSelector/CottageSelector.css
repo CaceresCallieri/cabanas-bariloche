@@ -4,8 +4,10 @@
 
 div.cottage-selector {
 	position: relative;
+	margin-bottom: 8px;
 	@supports not ((contain: paint) and (not (-moz-appearance: none))) {
 		/* CSS rules here will apply to all browsers except Chromium-based browsers */
+		/* Avoids bug in Chromium-based browsers regarding div location relative */
 		position: sticky;
 		top: 0;
 		z-index: 1000;
@@ -24,9 +26,15 @@ div.cottage-selector {
 .p-dropdown {
 	background-color: var(--selector-background-color);
 	color: black;
-	padding: 4px 8px 4px 4px;
-	/* padding-left: 32px; /* Space for the icon */
+	padding: 6px 10px 6px 6px;
 	border-radius: var(--border-radius-value);
+
+	color: white;
+	background: var(--glass-background);
+	backdrop-filter: var(--glass-backdrop-blur);
+	-webkit-backdrop-filter: var(--glass-backdrop-blur);
+	border: var(--glass-border);
+	box-shadow: var(--glass-shadow);
 }
 
 .p-dropdown-label {
@@ -40,25 +48,28 @@ div.cottage-selector {
 }
 
 .p-dropdown-items {
-	background-color: var(--selector-background-color);
-	color: black;
+	margin-top: 1px;
+	padding: 6px;
 	border-radius: var(--border-radius-value);
-	/* padding-left: 18px; */
 
-	/* Correctly round the corners of the first and last items */
-	> *:first-child {
-		border-radius: var(--border-radius-value) var(--border-radius-value) 0 0;
-	}
-	> *:last-child {
-		border-radius: 0 0 var(--border-radius-value) var(--border-radius-value);
-	}
+	background: var(--glass-background);
+	color: white;
+	backdrop-filter: var(--glass-backdrop-blur);
+	-webkit-backdrop-filter: var(--glass-backdrop-blur);
+	border: var(--glass-border);
+	box-shadow:
+		0 8px 32px rgba(0, 0, 0, 0.1),
+		inset 0 1px 0 rgba(255, 255, 255, 0.7),
+		inset 0 -1px 0 rgba(255, 255, 255, 0.1),
+		inset 0 0 30px 5px rgba(255, 255, 255, 0.5);
 
 	li.p-dropdown-item {
 		cursor: pointer;
 		text-align: center;
+		border-radius: 8px;
 
 		&:hover {
-			background-color: skyblue;
+			background: rgba(255, 255, 255, 0.3);
 		}
 	}
 }

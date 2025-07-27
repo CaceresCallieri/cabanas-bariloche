@@ -13,7 +13,7 @@ const ContactSection = () => {
 	return (
 		/* TODO: Select days to stay and number of guests */
 		<motion.a
-			className="contact-us"
+			className="contact-us glass-effect"
 			type="button"
 			aria-label="Chat on WhatsApp"
 			target="_blank"
