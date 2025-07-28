@@ -1,5 +1,8 @@
 .cottage-description {
+	border-radius: var(--border-radius-value);
 	text-align: left;
-	padding: 10px;
-	padding-left: 40px;
+	padding: 20px;
+	padding-left: 50px;
+	width: fit-content;
+	margin: 16px auto;
 }
