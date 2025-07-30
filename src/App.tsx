@@ -56,7 +56,7 @@ function App() {
 
 				<Location selectedCottage={selectedCottage} />
 
-				<ContactSection selectedCottageName={selectedCottage.name} />
+				<ContactSection />
 			</main>
 
 			<Footer />
