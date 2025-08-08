@@ -26,6 +26,9 @@ const Carousel: React.FC<CarouselProps> = ({ cottageImagesPaths }) => {
 	const [emblaMainRef, emblaMainApi] = useEmblaCarousel(options);
 	const [emblaThumbsRef, emblaThumbsApi] = useEmblaCarousel({
 		containScroll: "keepSnaps",
+		// This options may be necessary to accomplish a centered thumbnails effect
+		// containScroll: false,
+		// align: "center",
 		dragFree: true,
 	});
 

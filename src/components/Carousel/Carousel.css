@@ -53,7 +53,7 @@
 }
 
 .carousel-thumbs {
-	--thumbs-slide-spacing: 0.8rem;
+	--thumbs-slide-spacing: 16px;
 	--thumbs-slide-height: 6rem;
 	margin-top: var(--thumbs-slide-spacing);
 	margin-bottom: var(--thumbs-slide-spacing);
@@ -65,9 +65,18 @@
 	flex-direction: row;
 	margin-left: calc(var(--thumbs-slide-spacing) * -1);
 }
+
+/* Center thumbnails */
+.carousel-thumbs__viewport {
+	padding: 12px 16px;
+	overflow-x: hidden;
+	/* width: fit-content; */
+	/* margin: auto; */
+}
+
 .carousel-thumbs__slide {
 	flex: 0 0 22%;
-	min-width: 0;
+	min-width: 100px;
 	max-width: 100px;
 	padding-left: var(--thumbs-slide-spacing);
 }
