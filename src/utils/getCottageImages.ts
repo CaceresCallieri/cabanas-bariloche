@@ -1,5 +1,13 @@
 const getCottageImages = () => {
-	const cottageNames = ["mascardi", "otto", "huapi", "catedral", "frey", "moreno"] as const;
+	const cottageNames = [
+		"mascardi",
+		"otto",
+		"huapi",
+		"catedral",
+		"frey",
+		"exterior-barrio-belgrano",
+		"moreno",
+	] as const;
 
 	const cottageImages = cottageNames.reduce(
 		(acc, name) => {
@@ -137,6 +145,29 @@ function getCottageImagesPaths(cottageName: string): {
 						query: "?url",
 						import: "default",
 					}),
+				),
+			};
+		case "exterior-barrio-belgrano":
+			return {
+				mainImagesPaths: Object.values(
+					import.meta.glob(
+						"@assets/cottages/exterior-barrio-belgrano/main-images/*.webp",
+						{
+							eager: true,
+							query: "?url",
+							import: "default",
+						},
+					),
+				),
+				thumbnailsPaths: Object.values(
+					import.meta.glob(
+						"@assets/cottages/exterior-barrio-belgrano/thumbnails/*.webp",
+						{
+							eager: true,
+							query: "?url",
+							import: "default",
+						},
+					),
 				),
 			};
 		default:

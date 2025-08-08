@@ -58,6 +58,15 @@ const COTTAGES: COTTAGE[] = [
 		],
 	},
 	{
+		name: "Espacio Comun Belgrano",
+		code: "exterior-barrio-belgrano",
+		location: "Belgrano",
+		description: [
+			"Espacio comun compartido entre las cabañas ubicadas en Barrio Belgrano.",
+			"Asador incluido para disfrutar con familia y amigos.",
+		],
+	},
+	{
 		name: "Cabaña Catedral",
 		code: "catedral",
 		location: "Las Victorias",
