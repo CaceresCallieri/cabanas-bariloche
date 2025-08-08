@@ -5,7 +5,7 @@ const getCottageImages = () => {
 		"huapi",
 		"catedral",
 		"frey",
-		"exterior-barrio-belgrano",
+		"espacio-comun-belgrano",
 		"moreno",
 	] as const;
 
@@ -147,11 +147,11 @@ function getCottageImagesPaths(cottageName: string): {
 					}),
 				),
 			};
-		case "exterior-barrio-belgrano":
+		case "espacio-comun-belgrano":
 			return {
 				mainImagesPaths: Object.values(
 					import.meta.glob(
-						"@assets/cottages/exterior-barrio-belgrano/main-images/*.webp",
+						"@assets/cottages/espacio-comun-belgrano/main-images/*.webp",
 						{
 							eager: true,
 							query: "?url",
@@ -161,7 +161,7 @@ function getCottageImagesPaths(cottageName: string): {
 				),
 				thumbnailsPaths: Object.values(
 					import.meta.glob(
-						"@assets/cottages/exterior-barrio-belgrano/thumbnails/*.webp",
+						"@assets/cottages/espacio-comun-belgrano/thumbnails/*.webp",
 						{
 							eager: true,
 							query: "?url",
