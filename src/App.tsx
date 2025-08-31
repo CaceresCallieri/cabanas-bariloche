@@ -11,6 +11,7 @@ import CottageDescription from "./components/CottageDescription/CottageDescripti
 import Location from "./components/Location/Location";
 import ContactSection from "./components/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
+import CottagePageErrorBoundary from "./components/CottagePageErrorBoundary/CottagePageErrorBoundary";
 
 import COTTAGES from "./data/cottages";
 import { COTTAGE } from "./types";
@@ -72,7 +73,14 @@ function App() {
 	return (
 		<Routes>
 			<Route path="/" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
-			<Route path="/cottage/:cottageCode" element={<CottagePage />} />
+			<Route 
+				path="/cottage/:cottageCode" 
+				element={
+					<CottagePageErrorBoundary>
+						<CottagePage />
+					</CottagePageErrorBoundary>
+				} 
+			/>
 			<Route path="*" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
 		</Routes>
 	);
