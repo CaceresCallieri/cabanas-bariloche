@@ -73,6 +73,7 @@ function App() {
 		<Routes>
 			<Route path="/" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
 			<Route path="/cottage/:cottageCode" element={<CottagePage />} />
+			<Route path="*" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
 		</Routes>
 	);
 }
