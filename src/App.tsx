@@ -17,6 +17,7 @@ import { COTTAGE } from "./types";
 import { useCottageFromUrl } from "./hooks/useCottageFromUrl";
 import { useCottageNavigation } from "./hooks/useCottageNavigation";
 import { useCottageMeta } from "./hooks/useCottageMeta";
+import { getDefaultCottage } from "./utils/cottageDefaults";
 
 const COTTAGE_IMAGES = getCottageImages();
 const CURTAIN_ANIMATION_DURATION = 750; // Duration in milliseconds
@@ -66,9 +67,11 @@ const CottagePage = () => {
 };
 
 function App() {
+	const defaultCottage = getDefaultCottage();
+	
 	return (
 		<Routes>
-			<Route path="/" element={<Navigate to="/cottage/mascardi" replace />} />
+			<Route path="/" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
 			<Route path="/cottage/:cottageCode" element={<CottagePage />} />
 		</Routes>
 	);

@@ -19,6 +19,7 @@ This implementation adds unique URLs for each cottage in the Cabañas Bariloche 
 - `src/hooks/useCottageFromUrl.ts` - URL-to-cottage resolution
 - `src/hooks/useCottageNavigation.ts` - Animation-aware navigation
 - `src/hooks/useCottageMeta.ts` - Dynamic meta tag updates
+- `src/utils/cottageDefaults.ts` - Centralized default cottage configuration
 - `public/_redirects` - Netlify SPA routing configuration
 
 **Modified Files:**
@@ -29,18 +30,25 @@ This implementation adds unique URLs for each cottage in the Cabañas Bariloche 
 
 ## Critical Issues Requiring Immediate Attention
 
-### 1. Hardcoded Default Fallback (High Priority)
-**File**: `src/hooks/useCottageFromUrl.ts`  
-**Lines**: 14, 18
+### 1. ~~Hardcoded Default Fallback~~ ✅ **FIXED**
+**File**: `src/hooks/useCottageFromUrl.ts`, `src/App.tsx`, `src/utils/cottageDefaults.ts`  
+**Date Fixed**: 2025-08-31
 
-**Problem**: 
+**Original Problem**: 
 ```typescript
 navigate('/cottage/mascardi', { replace: true });
 return cottage || COTTAGES[0];
 ```
-Assumes `COTTAGES[0]` is always "mascardi" - creates tight coupling and potential inconsistency.
+Assumed `COTTAGES[0]` was always "mascardi" - created tight coupling and potential inconsistency.
 
-**Solution Context**: Need to establish a single source of truth for the default cottage. Consider creating a constant or using the cottage lookup consistently.
+**Solution Implemented**: 
+- Created `src/utils/cottageDefaults.ts` with `DEFAULT_COTTAGE_CODE = 'mascardi'` constant
+- Added `getDefaultCottage()` function with graceful fallback logic
+- Updated `useCottageFromUrl` hook to use consistent cottage lookup
+- Updated `App.tsx` root redirect to use dynamic default cottage path
+- Eliminated hardcoded strings in favor of data-driven approach
+
+**Result**: Single source of truth established, system resilient to cottage array changes.
 
 ### 2. Incomplete Meta Tag Management (High Priority)
 **File**: `src/hooks/useCottageMeta.ts`  
@@ -104,10 +112,10 @@ Only updates existing meta tags but doesn't create new ones, potentially leading
 ## Priority-Ordered Action Items
 
 ### Immediate (High Priority)
-1. **Fix Default Cottage Consistency**
-   - Create `DEFAULT_COTTAGE_CODE` constant
-   - Update both fallback logic and array fallback to use same cottage
-   - Files to modify: `src/hooks/useCottageFromUrl.ts`
+1. ✅ ~~**Fix Default Cottage Consistency**~~ **COMPLETED**
+   - ✅ Created `DEFAULT_COTTAGE_CODE` constant in `src/utils/cottageDefaults.ts`
+   - ✅ Updated both fallback logic and array fallback to use same cottage
+   - ✅ Files modified: `src/hooks/useCottageFromUrl.ts`, `src/App.tsx`
 
 2. **Enhance Meta Tag Creation**
    - Add logic to create missing meta tags
@@ -211,6 +219,7 @@ Current implementation updates:
 1. `src/data/cottages.ts` - Source of truth for cottage data
 2. `src/types.ts` - Core type definitions
 3. `src/App.tsx` - Main routing logic
-4. `src/utils/getCottageImages.ts` - Image loading system (unchanged but important context)
+4. `src/utils/cottageDefaults.ts` - Default cottage configuration and fallback logic
+5. `src/utils/getCottageImages.ts` - Image loading system (unchanged but important context)
 
 This document provides complete context for any future agent or developer to continue improving the cottage URL routing implementation.
