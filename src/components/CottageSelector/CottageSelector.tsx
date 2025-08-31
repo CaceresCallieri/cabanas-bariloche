@@ -1,13 +1,13 @@
 import "./CottageSelector.css";
 
-import React, { Dispatch, SetStateAction } from "react";
+import React from "react";
 import { Dropdown } from "primereact/dropdown";
 
 import { COTTAGE } from "../../types";
 
 interface CottageSelectorProps {
 	selectedCottage: COTTAGE;
-	setSelectedCottage: Dispatch<SetStateAction<COTTAGE>> | ((newCottage: COTTAGE) => void);
+	setSelectedCottage: (newCottage: COTTAGE) => void;
 	COTTAGES: COTTAGE[];
 }
 
@@ -22,9 +22,7 @@ const CottageSelector: React.FC<CottageSelectorProps> = (props) => {
 			<Dropdown
 				value={selectedCottage}
 				onChange={(event) => {
-					if (typeof setSelectedCottage === "function") {
-						setSelectedCottage(event.value);
-					}
+					setSelectedCottage(event.value);
 				}}
 				options={filteredCottages}
 				optionLabel="name"
