@@ -1,6 +1,6 @@
 import "./App.css";
 
-import { useState } from "react";
+import { Routes, Route, Navigate } from "react-router-dom";
 import getCottageImages from "./utils/getCottageImages";
 
 import HeroSection from "./components/HeroSection/HeroSection";
@@ -11,25 +11,28 @@ import CottageDescription from "./components/CottageDescription/CottageDescripti
 import Location from "./components/Location/Location";
 import ContactSection from "./components/ContactSection/ContactSection";
 import Footer from "./components/Footer/Footer";
+import CottagePageErrorBoundary from "./components/CottagePageErrorBoundary/CottagePageErrorBoundary";
 
 import COTTAGES from "./data/cottages";
 import { COTTAGE } from "./types";
+import { useCottageFromUrl } from "./hooks/useCottageFromUrl";
+import { useCottageNavigation } from "./hooks/useCottageNavigation";
+import { useCottageMeta } from "./hooks/useCottageMeta";
+import { getDefaultCottage } from "./utils/cottageDefaults";
 
 const COTTAGE_IMAGES = getCottageImages();
 const CURTAIN_ANIMATION_DURATION = 750; // Duration in milliseconds
 
-function App() {
-	const [selectedCottage, setSelectedCottage] = useState<COTTAGE>(COTTAGES[0]);
-	const [isCurtainAnimating, setIsCurtainAnimating] = useState(false);
+const CottagePage = () => {
+	const selectedCottage = useCottageFromUrl();
+	const { navigateWithAnimation, isCurtainAnimating } = useCottageNavigation();
+	
+	useCottageMeta(selectedCottage);
 
 	const cottageImagesPaths = COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES];
 
 	const handleCottageChange = (newCottage: COTTAGE) => {
-		setIsCurtainAnimating(true);
-		setSelectedCottage(newCottage);
-		setTimeout(() => {
-			setIsCurtainAnimating(false);
-		}, CURTAIN_ANIMATION_DURATION);
+		navigateWithAnimation(newCottage.code);
 	};
 
 	return (
@@ -61,6 +64,25 @@ function App() {
 
 			<Footer />
 		</>
+	);
+};
+
+function App() {
+	const defaultCottage = getDefaultCottage();
+	
+	return (
+		<Routes>
+			<Route path="/" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
+			<Route 
+				path="/cottage/:cottageCode" 
+				element={
+					<CottagePageErrorBoundary>
+						<CottagePage />
+					</CottagePageErrorBoundary>
+				} 
+			/>
+			<Route path="*" element={<Navigate to={`/cottage/${defaultCottage.code}`} replace />} />
+		</Routes>
 	);
 }
 
