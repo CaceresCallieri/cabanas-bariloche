@@ -1,16 +1,18 @@
 import "./HeroSection.css";
 import { motion } from "motion/react";
 import SnowingEffect from "../SnowingEffect/SnowingEffect";
+import { useSeason } from "../../hooks/useSeason";
 
 const HeroSection = () => {
 	const subHeaderText = "Tu lugar en la Patagonia...";
+	const { shouldShowSnow } = useSeason();
 
 	// Easing function for delay
 	const easeInQuad = (t: number) => t * t;
 
 	return (
 		<header>
-			<SnowingEffect />
+			{shouldShowSnow === true && <SnowingEffect />}
 
 			<h5>¡Bienvenido!</h5>
 			<h1 className="with-decorative-line">CABAÑAS BARILOCHE</h1>
