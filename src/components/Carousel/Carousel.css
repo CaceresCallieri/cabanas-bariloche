@@ -24,15 +24,10 @@
 }
 
 .carousel__slide img {
-	/* object-fit: cover maintains aspect ratio while filling container,
-	   but crops edges on images with different aspect ratios (e.g., landscape images).
-	   This prevents stretching while ensuring border-radius is visible. */
-	object-fit: cover;
+	aspect-ratio: 3/4;
 	border-radius: var(--border-radius-value);
 	max-width: 80vw;
 	max-height: 80vh;
-	width: 100%;
-	height: 80vh;
 }
 
 .carousel-navigation-button {
