@@ -7,6 +7,7 @@ const COTTAGES: COTTAGE[] = [
 		location: "Belgrano",
 		description: [
 			"Confort para hasta 5 personas en 2 cómodas habitaciones.",
+			"Diseño de dos plantas para mayor privacidad y amplitud.",
 			"Living luminoso para disfrutar en familia.",
 			"Cocina totalmente equipada, lista para tus comidas.",
 			"Dos baños para mayor comodidad durante tu estadía.",
