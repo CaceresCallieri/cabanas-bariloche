@@ -10,10 +10,9 @@ const CottageDescription: React.FC<{ selectedCottage: COTTAGE }> = ({ selectedCo
 					<li key={index}>{sentence}</li>
 				))}
 				{selectedCottage.location === "Belgrano" && (
-					<li key={selectedCottage.code}>
-						Ubicación céntrica, ideal para explorar la ciudad.
-					</li>
+					<li key={selectedCottage.code}>Ubicación céntrica, ideal para explorar la ciudad.</li>
 				)}
+				<li>Por el cuidado de nuestras cabañas, no se aceptan mascotas.</li>
 			</ul>
 		</div>
 	</div>
