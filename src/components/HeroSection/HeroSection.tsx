@@ -27,14 +27,15 @@ const HeroSection = () => {
 				className="with-decorative-line"
 				initial={{ opacity: 0 }}
 				animate={isBackgroundLoaded ? { opacity: 1 } : { opacity: 0 }}
-				transition={{ duration: 0.3, delay: 0.1 }}
+				transition={{ duration: 0.3 }}
 			>
 				CABAÑAS BARILOCHE
 			</motion.h1>
 			<h3>
 				{subHeaderText.split("").map((letter, index, array) => {
-					// Calculate the delay using the easing function
-					const delay = easeInQuad(index / array.length) * 1.75;
+					// Base delay after h1 + eased cascade for each letter
+					const baseDelay = 0.3;
+					const delay = baseDelay + easeInQuad(index / array.length) * 1.75;
 
 					return (
 						<motion.span
