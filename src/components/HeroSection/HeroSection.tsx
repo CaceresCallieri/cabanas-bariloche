@@ -2,20 +2,35 @@ import "./HeroSection.css";
 import { motion } from "motion/react";
 import SnowingEffect from "../SnowingEffect/SnowingEffect";
 import { useSeason } from "../../hooks/useSeason";
+import { useHeroBackgroundLoaded } from "../../hooks/useHeroBackgroundLoaded";
 
 const HeroSection = () => {
 	const subHeaderText = "Tu lugar en la Patagonia...";
 	const { shouldShowSnow } = useSeason();
+	const isBackgroundLoaded = useHeroBackgroundLoaded();
 
 	// Easing function for delay
 	const easeInQuad = (t: number) => t * t;
 
 	return (
 		<header>
-			{shouldShowSnow === true && <SnowingEffect />}
+			{shouldShowSnow === true && isBackgroundLoaded && <SnowingEffect />}
 
-			<h5>¡Bienvenido!</h5>
-			<h1 className="with-decorative-line">CABAÑAS BARILOCHE</h1>
+			<motion.h5
+				initial={{ opacity: 0 }}
+				animate={isBackgroundLoaded ? { opacity: 1 } : { opacity: 0 }}
+				transition={{ duration: 0.3 }}
+			>
+				¡Bienvenido!
+			</motion.h5>
+			<motion.h1
+				className="with-decorative-line"
+				initial={{ opacity: 0 }}
+				animate={isBackgroundLoaded ? { opacity: 1 } : { opacity: 0 }}
+				transition={{ duration: 0.3, delay: 0.1 }}
+			>
+				CABAÑAS BARILOCHE
+			</motion.h1>
 			<h3>
 				{subHeaderText.split("").map((letter, index, array) => {
 					// Calculate the delay using the easing function
@@ -24,7 +39,11 @@ const HeroSection = () => {
 					return (
 						<motion.span
 							initial={{ opacity: 0, y: -20 }}
-							animate={{ opacity: 1, y: 0 }}
+							animate={
+								isBackgroundLoaded
+									? { opacity: 1, y: 0 }
+									: { opacity: 0, y: -20 }
+							}
 							transition={{ duration: 0.1, delay }}
 							key={index}
 						>
