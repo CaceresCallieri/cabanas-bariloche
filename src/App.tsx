@@ -21,12 +21,17 @@ import { useCottageMeta } from "./hooks/useCottageMeta";
 import { getDefaultCottage } from "./utils/cottageDefaults";
 
 const COTTAGE_IMAGES = getCottageImages();
-const CURTAIN_ANIMATION_DURATION = 750; // Duration in milliseconds
 
 const CottagePage = () => {
 	const selectedCottage = useCottageFromUrl();
-	const { navigateWithAnimation, isCurtainAnimating } = useCottageNavigation();
-	
+	const {
+		navigateWithAnimation,
+		curtainPhase,
+		onCurtainCloseComplete,
+		onCurtainOpenComplete,
+		CURTAIN_ANIMATION_DURATION,
+	} = useCottageNavigation();
+
 	useCottageMeta(selectedCottage);
 
 	const cottageImagesPaths = COTTAGE_IMAGES[selectedCottage.code as keyof typeof COTTAGE_IMAGES];
@@ -48,8 +53,10 @@ const CottagePage = () => {
 				/>
 
 				<CurtainEffect
-					isCurtainAnimating={isCurtainAnimating}
-					CURTAIN_ANIMATION_DURATION={CURTAIN_ANIMATION_DURATION}
+					curtainPhase={curtainPhase}
+					curtainDuration={CURTAIN_ANIMATION_DURATION}
+					onCloseComplete={onCurtainCloseComplete}
+					onOpenComplete={onCurtainOpenComplete}
 				/>
 
 				<div className="carousel-and-description-container">
