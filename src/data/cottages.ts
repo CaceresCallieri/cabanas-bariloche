@@ -52,7 +52,7 @@ const COTTAGES: COTTAGE[] = [
 		code: "moreno",
 		location: "Belgrano",
 		description: [
-			"Espacio ideal con dos habitaciones para 4 personas, cómodo y funcional.",
+			"Espacio ideal con dos habitaciones para 5 personas, cómodo y funcional.",
 			"Baño con bañera para disfrutar de un merecido descanso.",
 			"Ambiente integrado con living y cocina.",
 			"Estacionamiento techado incluido para tu vehículo.",
