@@ -30,7 +30,7 @@ const COTTAGES: COTTAGE[] = [
 		code: "frey",
 		location: "Belgrano",
 		description: [
-			"Dos habitaciones confortables para hasta 5 huéspedes.",
+			"Dos habitaciones confortables para hasta 4 huéspedes.",
 			"Acogedor living con cocina integrada.",
 			"Baño completo con bañera para un merecido relax.",
 			"Estacionamiento incluido para tu vehículo.",
